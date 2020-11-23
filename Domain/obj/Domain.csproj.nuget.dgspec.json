@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Phat\\Desktop\\mvcDongHo\\Domain\\Domain.csproj": {}
+    "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Phat\\Desktop\\mvcDongHo\\Domain\\Domain.csproj": {
+    "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Phat\\Desktop\\mvcDongHo\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Phat\\Desktop\\mvcDongHo\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Phat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Phat\\Desktop\\mvcDongHo\\Domain\\obj\\",
+        "projectPath": "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\Data\\C#\\mvcDongHo\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -39,12 +43,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

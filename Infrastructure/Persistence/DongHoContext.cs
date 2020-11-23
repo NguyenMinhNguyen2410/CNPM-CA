@@ -5,7 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
-namespace CNPM.Models
+using Domain.Entities; 
+namespace Infrastructure.Persistence
 {
     public class DongHoContext: DbContext
     {

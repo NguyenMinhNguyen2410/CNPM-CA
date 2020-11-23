@@ -1,0 +1,15 @@
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.csprojAssemblyReference.cache
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+E:\Data\C#\mvcDongHo\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+E:\Data\C#\mvcDongHo\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+E:\Data\C#\mvcDongHo\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+E:\Data\C#\mvcDongHo\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+E:\Data\C#\mvcDongHo\Infrastructure\bin\Debug\net5.0\Domain.dll
+E:\Data\C#\mvcDongHo\Infrastructure\bin\Debug\net5.0\Domain.pdb
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+E:\Data\C#\mvcDongHo\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb

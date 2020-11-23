@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using mvcDongHo.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,27 +10,42 @@ namespace mvcDongHo.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public ActionResult About()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public ActionResult Cart()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
+        }
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+        public ActionResult Contactus()
+        {
+            return View();
+        }
+        public ActionResult MyAccout()
+        {
+            return View();
+        }
+   
+        public ActionResult Shop()
+        {
+            return View();
+        }
+        public ActionResult Shopdetail()
+        {
+            return View();
+        }
+        public ActionResult Wishlist()
+        {
+            return View();
         }
     }
 }

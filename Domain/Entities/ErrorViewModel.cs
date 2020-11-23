@@ -1,6 +1,6 @@
 using System;
 
-namespace WebBanDongHo.Models
+namespace Domain.Entities
 {
     public class ErrorViewModel
     {
