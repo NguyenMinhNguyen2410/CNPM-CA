@@ -206,3 +206,7 @@ D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5
 D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\ref\mvcDongHo.dll
 D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\mvcDongHo.pdb
 D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\mvcDongHo.genruntimeconfig.cache
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\Razor\Areas\Admin\Views\QuanLiSanPham\Index.cshtml.g.cs
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\mvcDongHo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
