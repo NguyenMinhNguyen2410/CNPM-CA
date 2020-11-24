@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\Infrastructure.csproj": {}
+    "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj": {
+    "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "E:\\Data\\C#\\mvcDongHo\\Domain\\obj\\",
+        "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Phat\\.nuget\\packages\\",
+        "outputPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,22 +58,18 @@
         }
       }
     },
-    "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\obj\\",
+        "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Phat\\.nuget\\packages\\",
+        "outputPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -90,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj"
+              "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj"
               }
             }
           }

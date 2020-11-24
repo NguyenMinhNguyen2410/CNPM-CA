@@ -5879,25 +5879,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguye\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Phat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Data\\C#\\mvcDongHo\\mvcDongHo\\mvcDongHo.csproj",
+      "projectUniqueName": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\mvcDongHo.csproj",
       "projectName": "mvcDongHo",
-      "projectPath": "E:\\Data\\C#\\mvcDongHo\\mvcDongHo\\mvcDongHo.csproj",
-      "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "E:\\Data\\C#\\mvcDongHo\\mvcDongHo\\obj\\",
+      "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\mvcDongHo.csproj",
+      "packagesPath": "C:\\Users\\Phat\\.nuget\\packages\\",
+      "outputPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5910,14 +5905,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Data\\C#\\mvcDongHo\\Application\\Application.csproj": {
-              "projectPath": "E:\\Data\\C#\\mvcDongHo\\Application\\Application.csproj"
+            "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Application\\Application.csproj": {
+              "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Application\\Application.csproj"
             },
-            "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\Data\\C#\\mvcDongHo\\Domain\\Domain.csproj"
+            "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Domain\\Domain.csproj"
             },
-            "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "E:\\Data\\C#\\mvcDongHo\\Infrastructure\\Infrastructure.csproj"
+            "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

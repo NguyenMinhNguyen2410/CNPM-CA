@@ -10,3 +10,15 @@ E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cac
 E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.dll
 E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\ref\Domain.dll
 E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.pdb
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\bin\Debug\net5.0\Domain.deps.json
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\bin\Debug\net5.0\Domain.dll
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\bin\Debug\net5.0\ref\Domain.dll
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\bin\Debug\net5.0\Domain.pdb
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.dll
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\ref\Domain.dll
+D:\ChuyenHocDuong\TaiLieuHocTap\CongNghePhanMem\CNPM-CA\Domain\obj\Debug\net5.0\Domain.pdb

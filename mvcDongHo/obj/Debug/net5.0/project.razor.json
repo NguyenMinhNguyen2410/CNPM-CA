@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\mvcDongHo.csproj",
+  "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\mvcDongHo.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15603,38 +15603,73 @@
   "RootNamespace": "mvcDongHo",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\About.cshtml",
+      "TargetPath": "Views\\Home\\About.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\_ViewStart.cshtml",
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Shop.cshtml",
+      "TargetPath": "Views\\Home\\Shop.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\MyAccout.cshtml",
+      "TargetPath": "Views\\Home\\MyAccout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Contactus.cshtml",
+      "TargetPath": "Views\\Home\\Contactus.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Cart.cshtml",
+      "TargetPath": "Views\\Home\\Cart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Wishlist.cshtml",
+      "TargetPath": "Views\\Home\\Wishlist.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Checkout.cshtml",
+      "TargetPath": "Views\\Home\\Checkout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\_ViewImports.cshtml",
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Phat\\Desktop\\mvcDongHo\\mvcDongHo\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Shopdetail.cshtml",
+      "TargetPath": "Views\\Home\\Shopdetail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ChuyenHocDuong\\TaiLieuHocTap\\CongNghePhanMem\\CNPM-CA\\mvcDongHo\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
