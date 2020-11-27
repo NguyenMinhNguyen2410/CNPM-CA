@@ -49,8 +49,16 @@ namespace mvcDongHo
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
+                    name: default,
+                    pattern: "{area:exists}/{controller}/{action}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: default,
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "Admin",
+                    pattern: "Admin",
+                    defaults: new { area = "Admin", Controller = "Dashboard", Action = "Index" });
+
             });
         }
     }
