@@ -1,6 +1,8 @@
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Domain.Repositories;
+using Application.Services;
+using Application.Interfaces;
 
 namespace mvcDongHo
 {
@@ -24,6 +31,19 @@ namespace mvcDongHo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<DongHoContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataConnection")));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.LoginPath = "/Admin/Login/Index";
+                options.AccessDeniedPath = "";
+            });
+
+            //Login
+            services.AddScoped<ITaiKhoanKHRepository, TaiKhoanKHRepository>();
+            services.AddScoped<ITaiKhoanKHServices, TaiKhoanKHServices>();
+            //QuanLiSanPham
+            services.AddScoped<ISanPhamRepository, SanPhamRepository>();
+            services.AddScoped<ISanPhamServices, SanPhamServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +66,8 @@ namespace mvcDongHo
 
             app.UseAuthorization();
 
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -58,7 +80,10 @@ namespace mvcDongHo
                     name: "Admin",
                     pattern: "Admin",
                     defaults: new { area = "Admin", Controller = "Dashboard", Action = "Index" });
-
+                endpoints.MapControllerRoute(
+                    name: "LoginAdmin",
+                    pattern: "LoginAdmin",
+                    defaults: new { area = "Admin", Controller = "Login", Action = "Index" });
             });
         }
     }
