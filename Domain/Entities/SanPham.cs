@@ -32,5 +32,6 @@ namespace Domain.Entities
 
         [Column(TypeName = "float")]
         public float Gia{get; set;}
+
     }
 }

@@ -16,36 +16,34 @@
         <!-- form start -->
         <form asp-area="Admin" asp-controller="QuanLiNhaCungCap" asp-action="ThemNhaCungCapData">
             @*đường dẫn đến admin/ chạy quanlíanphamcontroler/ chạy hàm them sản phẩm*@
-        <div class="card-body">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Mã nhà cung cấp</label>
-                <input asp-for="nhaCungCapDTO.IDNhaCungCap" class="form-control" id="exampleInputEmail1" placeholder="Nhập mã nhà cung cấp">
-                <span class="focus-input100 text-danger" asp-validation-for="nhaCungCapDTO.IDNhaCungCap"></span>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Mã nhà cung cấp</label>
+                    <input class="form-control" id="exampleInputEmail1" placeholder="Nhập mã nhà cung cấp">
+                    <span class="focus-input100 text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Tên nhà cung cấp</label>
+                    <input class="form-control" id="exampleInputPassword1" placeholder="Nhập tên nhà cung cấp">@*asp-for định danh cho cái input*@
+                    <span class="focus-input100 text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Địa chỉ</label>
+                    <input class="form-control" id="exampleInputPassword1" placeholder="Nhập địa chỉ">@*asp-for định danh cho cái input*@
+                    <span class="focus-input100 text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Số điện thoại</label>
+                    <input class="form-control" id="exampleInputPassword1" placeholder="Nhập số điện thoại">@*asp-for định danh cho cái input*@
+                    <span class="focus-input100 text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Tên nhà cung cấp</label>
-                <input asp-for="nhaCungCapDTO.TenNhacungCap" class="form-control" id="exampleInputPassword1" placeholder="Nhập tên nhà cung cấp">@*asp-for định danh cho cái input*@
-                <span class="focus-input100 text-danger" asp-validation-for="nhaCungCapDTO.TenNhacungCap"></span>
+            <!-- /.card-body -->
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Thêm</button>
             </div>
-            <!--Combobox-->
-            <div class="form-group">
-                <label>Địa chỉ</label>
-                <input asp-for="nhaCungCapDTO.DiaChi" class="form-control" id="exampleInputPassword1" placeholder="Nhập địa chỉ">
-                <span class="focus-input100 text-danger" asp-validation-for="nhaCungCapDTO.DiaChi"></span>
-            </div>
-            <div class="form-group">
-                <label>Số điện thoại</label>
-                <input asp-for="nhaCungCapDTO.SoDienThoai" class="form-control" id="exampleInputPassword1" placeholder="Nhập số điện thoại">
-                <span class="focus-input100 text-danger" asp-validation-for="nhaCungCapDTO.SoDienThoai"></span>
-            </div>
-            
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Thêm nhà cung cấp</button>
-        </div>
-    </form>
-</div>
-<!-- /.card -->
+        </form>
+    </div>
+    <!-- /.card -->
 
 </div>

@@ -14,7 +14,6 @@ namespace Infrastructure.Persistence
             : base(options)
         {
         }
-
         public DbSet<ChiTietHoaDonBan> chiTietHoaDonBan{get; set;}     
         public DbSet<ChiTietHoaDonNhap> chiTietHoaDonNhap{get; set;}
         public DbSet<HoaDonBan> hoaDonBan{get; set;}     

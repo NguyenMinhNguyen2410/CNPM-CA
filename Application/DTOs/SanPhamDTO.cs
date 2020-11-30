@@ -23,5 +23,6 @@ namespace Application.DTOs
         public int SoLuong { get; set; }
 
         public float Gia { get; set; }
+
     }
 }

@@ -82,7 +82,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
+    with font-awesome or any other icon font library -->
                         <li class="nav-item menu-open">
                             <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-link active">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
@@ -118,6 +118,63 @@ The above copyright notice and this permission notice shall be included in all c
                                 </li>
                             </ul>
                         </li>
+                        
+                        <!--Quản lý loại dây-->
+                        <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <!-- <i class="nav-icon fas fa-th"></i> -->
+                                <!-- <i class="ion ion-bag"></i> -->
+                                <i class="fas fa-shopping-bag"></i>
+                                <p>
+                                    Quản lí loại dây
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="QuanLiLoaiDay" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <!-- <i class="far fa-file-alt"></i> -->
+                                        <p>Loại dây</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="QuanLiLoaiDay" asp-action="ThemLoaiDay" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Thêm loại dây</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--End Quản lí loại dây-->
+                        <!--Quản lí thương hiệu-->
+                        <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <!-- <i class="nav-icon fas fa-th"></i> -->
+                                <!-- <i class="ion ion-bag"></i> -->
+                                <i class="fas fa-shopping-bag"></i>
+                                <p>
+                                    Quản lí thương hiệu
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="QuanLiThuongHieu" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <!-- <i class="far fa-file-alt"></i> -->
+                                        <p>Thương hiệu</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="QuanLiThuongHieu" asp-action="ThemThuongHieu" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Thêm thương hiệu</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--End quản lí thương hiệu-->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <!-- <i class="nav-icon fas fa-copy"></i> -->
