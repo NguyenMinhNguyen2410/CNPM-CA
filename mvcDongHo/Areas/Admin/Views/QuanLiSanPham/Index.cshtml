@@ -32,10 +32,16 @@
 <table class="table table-striped" style="width: 96%; margin-left: 2%; border:1px solid #dee2e6;">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Mã sản phẩm</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Loại dây</th>
+            <th scope="col">Thương hiệu</th>
+            <th scope="col">Nhà cung cấp</th>
+            <th scope="col">Bảo hành</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Giá</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -44,18 +50,16 @@
             <td>Mark</td>
             <td>Otto</td>
             <td>mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>twitter</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>mdo</td>
+            <td>
+                <button type="submit" class="btn btn-block btn-warning" asp-area="Admin" asp-controller="QuanLiSanPham" asp-action="Index">Sửa</button>
+            </td>
+            <td>
+                <button type="submit" class="btn btn-block btn-danger">Xóa</button>
+            </td>
         </tr>
     </tbody>
 </table>
