@@ -123,16 +123,22 @@ The above copyright notice and this permission notice shall be included in all c
                                 <!-- <i class="nav-icon fas fa-copy"></i> -->
                                 <i class="far fa-file-alt"></i>
                                 <p>
-                                    Quản lí hóa đơn bán
+                                    Quản lí hóa đơn
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <!-- begin dropdown -->
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="QuanLiHoaDon" asp-action="Index" class="nav-link">
+                                    <a asp-area="Admin" asp-controller="QuanLiHoaDonBan" asp-action="Index" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Hóa đơn bán</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="QuanLiHoaDonNhap" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Hóa đơn nhập</p>
                                     </a>
                                 </li>
                             </ul>
