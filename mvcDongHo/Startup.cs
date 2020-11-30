@@ -12,7 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Domain.Repositories;
+using Domain.Interfaces;
 using Application.Services;
 using Application.Interfaces;
 

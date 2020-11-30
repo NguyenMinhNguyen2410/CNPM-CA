@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    class LoaiDayDTO
+    public class LoaiDayDTO
     {
         public string IDDay { get; set; }
 

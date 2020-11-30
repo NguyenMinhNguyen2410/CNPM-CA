@@ -10,5 +10,7 @@ namespace Application.Interfaces
     public interface ISanPhamServices
     {
         public void themSanPham(SanPhamDTO sanPham);
+        public void suaSanPham(SanPhamDTO sanPham);
+        public void xoaSanPham(SanPhamDTO sanPham);
     }
 }

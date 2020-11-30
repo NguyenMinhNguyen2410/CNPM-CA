@@ -1502,7 +1502,7 @@
 }
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
  .all-title-box{
-     background: url("../images/all-bg-title.jpg") no-repeat center center;
+     
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -ms-background-size: cover;
@@ -2189,7 +2189,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+     color: #111111;
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
@@ -2368,7 +2368,6 @@
 }
  .contact-info-left{
      padding: 20px;
-     background: url(../images/contact-bg.jpg) no-repeat center;
 	 background-size: cover;
 }
  .contact-info-left h2{

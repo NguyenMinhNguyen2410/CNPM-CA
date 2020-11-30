@@ -1,7 +1,7 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
 using Application.Mappings;
-using Domain.Repositories;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +22,16 @@ namespace Application.Services
         {
            // var sanPham = sanPhamDTO.MappingSanPham();
             _sanPhamRepository.themSanPham(sanPhamDTO.MappingSanPham());
+        }
+        public void suaSanPham(SanPhamDTO sanPhamDTO)
+        {
+           // var sanPham = sanPhamDTO.MappingSanPham();
+            _sanPhamRepository.suaSanPham(sanPhamDTO.MappingSanPham());
+        }
+        public void xoaSanPham(SanPhamDTO sanPhamDTO)
+        {
+           // var sanPham = sanPhamDTO.MappingSanPham();
+            _sanPhamRepository.xoaSanPham(sanPhamDTO.MappingSanPham());
         }
     }
 }

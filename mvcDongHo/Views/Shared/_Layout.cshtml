@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
 
 <head>
     <style type="text~/css">
         li {
-            text-align:center;
+            text-align: center;
         }
     </style>
     <meta charset="utf-8">
@@ -46,14 +50,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                   
+
                     <div class="right-phone-box">
                         <p>ĐIỆN THOẠI :- <a href="#">+84 999 888 7777</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li>@Html.ActionLink("TÀI KHOẢN", "MyAccout","Home")</li>
-                            <li>@Html.ActionLink("VỊ TRÍ CỬA HÀNG", "Index", "Home")</li>
+                            <li>@Html.ActionLink("TÀI KHOẢN", "MyAccout", "Home")</li>
                             <li>@Html.ActionLink("LIÊN HỆ", "Contactus", "Home")</li>
                         </ul>
                     </div>
@@ -69,29 +72,14 @@
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT80
+                                    <i class="fab fa-opencart"></i> Khách hàng là trên hết
                                 </li>
                                 <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
-                                </li>
+                                    <i class="fab fa-opencart"></i> Cam kết sản phẩm chất lượng 100%
                                 <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Vegetables
+                                    <i class="fab fa-opencart"></i> Đổi trả 1:1 nếu sản phẩm lỗi trong quá trình sử dụng
                                 </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Vegetables
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT30
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -110,7 +98,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="~/images/logo.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="/images/logo1.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -119,18 +107,18 @@
                         <li class="nav-item">@Html.ActionLink("Trang Chủ", "Index", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("Chúng tôi", "About", "Home")</li>
                         <li class="dropdown active" style="text-align:center">
-                            <a href="@Url.Action("","")" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">CỬA HÀNG</a>
+                            <a href="@Url.Action("Shop","Home")" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">CỬA HÀNG</a>
                             <ul class="dropdown-menu">
                                 <li><a href="@Url.Action("Shop","Home")">Sản Phẩm</a></li>
-                                <li><a href="@Url.Action("Shopdetail","Home")">Chi Tiết Sản Phẩm</a></li>
+                        
                                 <li><a href="@Url.Action("Checkout","Home")">Thanh toán</a></li>
                                 <li><a href="@Url.Action("MyAccout","Home")">Tài Khoản</a></li>
-                                <li><a href="@Url.Action("Wishlist","Home")">Yêu Thích</a></li>
 
-                              
+
+
                             </ul>
                         </li>
-              
+
                         <li class="nav-item">@Html.ActionLink("Liên Hệ", "Contactus", "Home")</a></li>
                     </ul>
                 </div>
@@ -140,7 +128,7 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
-                            <a href="#">
+                            <a href="@Url.Action("Cart","Home")">
                                 <i class="fa fa-shopping-bag"></i>
                                 <span class="badge">0</span>
                                 <p>GIỎ HÀNG</p>
@@ -156,22 +144,22 @@
                 <li class="cart-box">
                     <ul class="cart-list">
                         <li>
-                            <a href="#" class="photo"><img src="~/images//img-pro-01.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Delica omtantur </a></h6>
                             <p>1x - <span class="price">$80.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="~/images//img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="/images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Omnes ocurreret</a></h6>
                             <p>1x - <span class="price">$60.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="~/images//img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Agam facilisis</a></h6>
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
                         <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                            <a href="@Url.Action("Cart","Home")" class="btn btn-default hvr-hover btn-cart">Xem giỏ hàng</a>
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
                         </li>
                     </ul>
@@ -197,189 +185,121 @@
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme owl-loaded owl-drag">
+
+
+
+
+
+
+
+
+
+
             <div class="owl-stage-outer">
                 <div class="owl-stage" style="transform: translate3d(-1024px, 0px, 0px); transition: 0.25s; width: 4097px;">
                     <div class="owl-item cloned" style="width: 204.8px;">
                         <div class="item">
                             <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-06.jpg" alt="">
+                                <img src="/images/1.jpg" alt="">
                                 <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class=""></i></a>
                                 </div>
                             </div>
                         </div>
                     </div><div class="owl-item cloned" style="width: 204.8px;">
                         <div class="item">
                             <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-07.jpg" alt="">
+                                <img src="/images/3.jpg" alt="">
                                 <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-08.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-09.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-05.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item active" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-01.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item active" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-02.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item active" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-03.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item active" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-04.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item active" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-05.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item active" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-06.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-07.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-08.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-09.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-05.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-01.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-02.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-03.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-04.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div class="owl-item cloned" style="width: 204.8px;">
-                        <div class="item">
-                            <div class="ins-inner-box">
-                                <img src="~/images/instagram-img-05.jpg" alt="">
-                                <div class="hov-in">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class=""></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="owl-item cloned" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/cc.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/4.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item cloned" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/5.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/6.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/7.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/8.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/9.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/10.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 204.8px;">
+                        <div class="item">
+                            <div class="ins-inner-box">
+                                <img src="/images/11.jpg" alt="">
+                                <div class="hov-in">
+                                    <a href="#"><i class=""></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fas fa-arrow-right"></i></button></div><div class="owl-dots disabled"></div>
         </div>
@@ -392,38 +312,37 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-top-box">
-                            <h3>Business Time</h3>
+                            <h3>Giờ mở cửa</h3>
                             <ul class="list-time">
-                                <li>Monday - Friday: 08.00am to 05.00pm</li>
-                                <li>Saturday: 10.00am to 08.00pm</li>
-                                <li>Sunday: <span>Closed</span></li>
+                                <li>Thứ hai - Thứ 6: 08.00 sáng - 05.00 chiều</li>
+                                <li>Thứ 7: 10.00 sáng to 08.00 tối</li>
+                                <li>Chủ nhật: <span>Đóng cửa</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-top-box">
-                            <h3>Newsletter</h3>
+                            <h3>Đăng kí nhận khuyến mãi</h3>
                             <form class="newsletter-box">
                                 <div class="form-group">
-                                    <input class="" type="email" name="Email" placeholder="Email Address*">
+                                    <input class="" type="email" name="Email" placeholder="Email của bạn*">
                                     <i class="fa fa-envelope"></i>
                                 </div>
-                                <button type="submit" class="btn hvr-hover">Submit</button>
+                                <button type="submit" class="btn hvr-hover">Đăng kí</button>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-top-box">
-                            <h3>Social Media</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Mạng xã hội</h3>
+                            <p>Hãy liên hệ với chúng tôi</p>
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+
+
+                                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-yahoo" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -432,36 +351,36 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h4>Về cửa hàng của chúng tôi</h4>
+                            <p>Luôn đặt lợi ích khách hàng lên trên hết</p>
+                            <p> Cam kết hàng chính hãng và giá tốt nhất </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
-                            <h4>Information</h4>
+                            <h4>Thông tin</h4>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Customer Service</a></li>
-                                <li><a href="#">Our Sitemap</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="@Url.Action("About","Home")">Đội ngũ nhân viên</a></li>
+                                <li><a href="@Url.Action("Contactus","Home")">Liên hệ</a></li>
+
+
+
+                                <li><a href="#">Thông tin giao hàng</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
+                            <h4>Thông tin cửa hàng</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: 273 An Dương Vương, Hồ Chí Minh </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Điện thoại: <a href="tel:+84988325962">+84 7777 99999 0</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">quochung5962@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -474,8 +393,8 @@
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">
-            All Rights Reserved. © 2018 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">html design</a>
+            Thực hiện bởi: Nguyên, Nhân, Phát, Huy, Hưng - Trường Đh Sài Gòn
+
         </p>
     </div>
     <!-- End copyright  -->
