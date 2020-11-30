@@ -22,9 +22,9 @@ namespace mvcDongHo.Areas.Admin.Controllers
         }
         public IActionResult ThemSanPham()
         {
-            return View(nameof(ThemSanPham));
+            return View();
         }
-        public IActionResult ThemSanPham(SanPhamView sanPhamView)
+        public IActionResult ThemSanPhamData(SanPhamView sanPhamView)
         {
             if(ModelState.IsValid)//kiểm tra dữ liệu đã được post đúng hay chưa
             {   
