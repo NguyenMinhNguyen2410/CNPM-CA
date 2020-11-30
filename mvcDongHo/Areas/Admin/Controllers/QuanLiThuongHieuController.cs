@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 namespace mvcDongHo.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class QuanLiKhachHangController : Controller
+    public class QuanLiThuongHieuController : Controller
     {
-
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult ThemKhachHang()
+        public IActionResult ThemThuongHieu()
         {
             return View();
         }

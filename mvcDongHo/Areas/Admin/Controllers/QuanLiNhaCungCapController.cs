@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace mvcDongHo.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class QuanLiNhaCungCapController : Controller
     {
-        [Area("Admin")]
+
         public IActionResult Index()
         {
             return View();
