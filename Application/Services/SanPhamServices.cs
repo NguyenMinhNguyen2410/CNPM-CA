@@ -23,5 +23,15 @@ namespace Application.Services
            // var sanPham = sanPhamDTO.MappingSanPham();
             _sanPhamRepository.themSanPham(sanPhamDTO.MappingSanPham());
         }
+        public void suaSanPham(SanPhamDTO sanPhamDTO)
+        {
+           // var sanPham = sanPhamDTO.MappingSanPham();
+            _sanPhamRepository.suaSanPham(sanPhamDTO.MappingSanPham());
+        }
+        public void xoaSanPham(SanPhamDTO sanPhamDTO)
+        {
+           // var sanPham = sanPhamDTO.MappingSanPham();
+            _sanPhamRepository.xoaSanPham(sanPhamDTO.MappingSanPham());
+        }
     }
 }

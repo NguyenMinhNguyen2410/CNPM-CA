@@ -12,5 +12,7 @@ namespace Domain.Interfaces
         IEnumerable<SanPham> getAll();
 
         void themSanPham(SanPham sanPham);
+        void suaSanPham(SanPham sanPham);
+        void xoaSanPham(SanPham sanPham);
     }
 }
