@@ -13,10 +13,22 @@ namespace Application.Services
     
     public class ThuongHieuServices : IThuongHieuServices
     {
-        private readonly IThuongHieuRepository _ThuongHieuRepository;//Tạo biến chứa dữ liệu 
-        public ThuongHieuServices(IThuongHieuRepository ThuongHieuRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
+        private readonly IThuongHieuRepository _thuongHieuRepository;//Tạo biến chứa dữ liệu 
+        public ThuongHieuServices(IThuongHieuRepository thuongHieuRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
         {
-            _ThuongHieuRepository = ThuongHieuRepository;
+            _thuongHieuRepository = thuongHieuRepository;
         }
+        // public void themThuongHieu(ThuongHieuDTO ThuongHieuDTO)
+        // {
+        //     _thuongHieuRepository.themThuongHieu(thuongHieuDTO.MappingThuongHieu());
+        // }
+        // public void suaThuongHieu(ThuongHieuDTO ThuongHieuDTO)
+        // {
+        //     _thuongHieuRepository.suaThuongHieu(thuongHieuDTO.MappingThuongHieu());
+        // }
+        // public void xoaThuongHieu(ThuongHieuDTO ThuongHieuDTO)
+        // {
+        //     _thuongHieuRepository.xoaThuongHieu(thuongHieuDTO.MappingThuongHieu());
+        // }
     }
 }

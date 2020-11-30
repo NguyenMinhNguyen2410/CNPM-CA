@@ -13,10 +13,10 @@ namespace Application.Services
     
     public class ChiTietHoaDonBanServices : IChiTietHoaDonBanServices
     {
-        private readonly IChiTietHoaDonBanRepository _ChiTietHoaDonBanRepository;//Tạo biến chứa dữ liệu 
-        public ChiTietHoaDonBanServices(IChiTietHoaDonBanRepository ChiTietHoaDonBanRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
+        private readonly IChiTietHoaDonBanRepository _chiTietHoaDonBanRepository;//Tạo biến chứa dữ liệu 
+        public ChiTietHoaDonBanServices(IChiTietHoaDonBanRepository chiTietHoaDonBanRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
         {
-            _ChiTietHoaDonBanRepository = ChiTietHoaDonBanRepository;
+            _chiTietHoaDonBanRepository = chiTietHoaDonBanRepository;
         }
     }
 }

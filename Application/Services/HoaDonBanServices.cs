@@ -13,10 +13,10 @@ namespace Application.Services
     
     public class HoaDonBanServices : IHoaDonBanServices
     {
-        private readonly IHoaDonBanRepository _HoaDonBanRepository;//Tạo biến chứa dữ liệu 
-        public HoaDonBanServices(IHoaDonBanRepository HoaDonBanRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
+        private readonly IHoaDonBanRepository _hoaDonBanRepository;//Tạo biến chứa dữ liệu 
+        public HoaDonBanServices(IHoaDonBanRepository hoaDonBanRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
         {
-            _HoaDonBanRepository = HoaDonBanRepository;
+            _hoaDonBanRepository = hoaDonBanRepository;
         }
     }
 }

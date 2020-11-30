@@ -9,6 +9,8 @@ namespace Application.Interfaces
 {
     public interface IThuongHieuServices
     {
-        
+        // public void themThuongHieu(ThuongHieuDTO thuongHieu);
+        // public void suaThuongHieu(ThuongHieuDTO thuongHieu);
+        // public void xoaThuongHieu(ThuongHieuDTO thuongHieu);
     }
 }

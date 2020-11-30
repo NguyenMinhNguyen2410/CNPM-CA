@@ -13,10 +13,10 @@ namespace Application.Services
     
     public class KhachHangServices : IKhachHangServices
     {
-        private readonly IKhachHangRepository _KhachHangRepository;//Tạo biến chứa dữ liệu 
-        public KhachHangServices(IKhachHangRepository KhachHangRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
+        private readonly IKhachHangRepository _khachHangRepository;//Tạo biến chứa dữ liệu 
+        public KhachHangServices(IKhachHangRepository khachHangRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
         {
-            _KhachHangRepository = KhachHangRepository;
+            _khachHangRepository = khachHangRepository;
         }
     }
 }
