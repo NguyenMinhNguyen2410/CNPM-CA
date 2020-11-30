@@ -26,7 +26,7 @@ namespace mvcDongHo.Areas.Admin.Controllers
         }
         public IActionResult ThemSanPham(SanPhamView sanPhamView)
         {
-            if(ModelState.IsValid)
+            if(ModelState.IsValid)//kiểm tra dữ liệu đã được post đúng hay chưa
             {   
                 _sanPhamServices.themSanPham(sanPhamView.sanPhamDTO);
                 return View(nameof(Index));//return view là trả về view nhưng không chạy những gì trong đó

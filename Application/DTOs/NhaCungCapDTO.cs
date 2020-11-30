@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    class NhaCungCapDTO
+    public class NhaCungCapDTO
     {
         public string IDNhaCungCap { get; set; }
 

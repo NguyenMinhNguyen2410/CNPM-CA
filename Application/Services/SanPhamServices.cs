@@ -1,7 +1,7 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
 using Application.Mappings;
-using Domain.Repositories;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

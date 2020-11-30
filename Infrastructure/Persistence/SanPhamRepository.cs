@@ -1,5 +1,5 @@
 ﻿using Domain.Entities;
-using Domain.Repositories;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence
 {
-    public class SanPhamRepository : ISanPhamRepository
+    public class SanPhamRepository : ISanPhamRepository //kế thừa interface, từ Domain/Interfaces
     {
-        private readonly DongHoContext _conText;
-        public SanPhamRepository(DongHoContext conText)
+        private readonly DongHoContext _conText;//Khởi tạo biến context
+        public SanPhamRepository(DongHoContext conText)//contructor để gán giá trị database cho biến context
         {
             this._conText = conText;
         }

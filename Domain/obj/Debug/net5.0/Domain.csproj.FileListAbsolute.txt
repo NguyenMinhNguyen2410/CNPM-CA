@@ -1,0 +1,12 @@
+E:\Data\C#\mvcDongHo\Domain\bin\Debug\net5.0\Domain.deps.json
+E:\Data\C#\mvcDongHo\Domain\bin\Debug\net5.0\Domain.dll
+E:\Data\C#\mvcDongHo\Domain\bin\Debug\net5.0\ref\Domain.dll
+E:\Data\C#\mvcDongHo\Domain\bin\Debug\net5.0\Domain.pdb
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.dll
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\ref\Domain.dll
+E:\Data\C#\mvcDongHo\Domain\obj\Debug\net5.0\Domain.pdb
