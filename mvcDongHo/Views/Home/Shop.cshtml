@@ -1,18 +1,18 @@
 ﻿
 @{
-    ViewBag.Title = "Shop";
+    ViewBag.Title = "Sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!-- Start All Title Box -->
-<div class="all-title-box">
+<div style="background: url(/images/bg1.jpg)" class="all-title-box">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Shop</h2>
+                <h2>Sản phẩm</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Shop</li>
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Sản Phẩm</li>
                 </ul>
             </div>
         </div>
@@ -28,16 +28,16 @@
                     <div class="product-item-filter row">
                         <div class="col-12 col-sm-8 text-center text-sm-left">
                             <div class="toolbar-sorter-right">
-                                <span>Sort by </span>
+                                <span>Sắp xếp</span>
                                 <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                                    <option data-display="Select">Nothing</option>
-                                    <option value="1">Popularity</option>
-                                    <option value="2">High Price → High Price</option>
-                                    <option value="3">Low Price → High Price</option>
-                                    <option value="4">Best Selling</option>
+                                    <option data-display="Select">Không sắp xếp</option>
+                                    <option value="1">Phổ biến</option>
+                                    <option value="2">Giá cao -> giá thấp</option>
+                                    <option value="3">Giá thấp -> giá cao</option>
+                                    <option value="4">Bán chạy</option>
                                 </select>
                             </div>
-                            <p>Showing all 4 results</p>
+
                         </div>
                         <div class="col-12 col-sm-4 text-center text-sm-right">
                             <ul class="nav nav-tabs ml-auto">
@@ -59,16 +59,15 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+                                                    <p class="sale">Mới</p>
                                                 </div>
-                                                <img src="~/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -81,16 +80,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="new">New</p>
+                                                    <p class="new">Mới</p>
                                                 </div>
-                                                <img src="~/images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -103,16 +100,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+                                                    <p class="sale">Sắp ra mắt</p>
                                                 </div>
-                                                <img src="~/images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -125,16 +120,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="new">New</p>
+                                                    <p class="new">Mới</p>
                                                 </div>
-                                                <img src="~/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -147,16 +140,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+                                                    <p class="sale">Bán chạy</p>
                                                 </div>
-                                                <img src="~/images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -169,16 +160,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+                                                    <p class="sale">Mới</p>
                                                 </div>
-                                                <img src="~/images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -191,16 +180,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+                                                    <p class="sale">Mới</p>
                                                 </div>
-                                                <img src="~/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -213,16 +200,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+                                                    <p class="sale">Bán chạy</p>
                                                 </div>
-                                                <img src="~/images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -235,16 +220,14 @@
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="new">New</p>
+                                                    <p class="new">Sắp ra mắt</p>
                                                 </div>
-                                                <img src="~/images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                                                <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
                                                     <ul>
                                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                     </ul>
-                                                    <a class="cart" href="#">Add to Cart</a>
+                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                             <div class="why-text">
@@ -262,14 +245,12 @@
                                             <div class="products-single fix">
                                                 <div class="box-img-hover">
                                                     <div class="type-lb">
-                                                        <p class="new">New</p>
+                                                        <p class="new">Mới</p>
                                                     </div>
-                                                    <img src="~/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                                                    <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
                                                     <div class="mask-icon">
                                                         <ul>
                                                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                                         </ul>
 
                                                     </div>
@@ -285,7 +266,7 @@
                                                     sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
                                                     Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.
                                                 </p>
-                                                <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                <a class="btn hvr-hover" href="#">Thêm vào giỏ hàng</a>
                                             </div>
                                         </div>
                                     </div>
@@ -298,7 +279,7 @@
                                                     <div class="type-lb">
                                                         <p class="sale">Sale</p>
                                                     </div>
-                                                    <img src="~/images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                                                    <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
                                                     <div class="mask-icon">
                                                         <ul>
                                                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -319,7 +300,7 @@
                                                     sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
                                                     Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.
                                                 </p>
-                                                <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                <a class="btn hvr-hover" href="#">Thêm vào giỏ hàng</a>
                                             </div>
                                         </div>
                                     </div>
@@ -332,7 +313,7 @@
                                                     <div class="type-lb">
                                                         <p class="sale">Sale</p>
                                                     </div>
-                                                    <img src="~/images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                                                    <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
                                                     <div class="mask-icon">
                                                         <ul>
                                                             <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -353,7 +334,7 @@
                                                     sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
                                                     Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.
                                                 </p>
-                                                <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                <a class="btn hvr-hover" href="#">Thêm vào giỏ hàng</a>
                                             </div>
                                         </div>
                                     </div>
@@ -367,13 +348,13 @@
                 <div class="product-categori">
                     <div class="search-product">
                         <form action="#">
-                            <input class="form-control" placeholder="Search here..." type="text">
+                            <input class="form-control" placeholder="Tìm kiếm..." type="text">
                             <button type="submit"> <i class="fa fa-search"></i> </button>
                         </form>
                     </div>
                     <div class="filter-sidebar-left">
                         <div class="title-left">
-                            <h3>Categories</h3>
+                            <h3>Lọc</h3>
                         </div>
                         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
                             <div class="list-group-collapse sub-men">
@@ -409,9 +390,7 @@
                         </div>
                     </div>
                     <div class="filter-price-left">
-                        <div class="title-left">
-                            <h3>Price</h3>
-                        </div>
+
                         <div class="price-box-slider">
                             <div id="slider-range"></div>
                             <p>
