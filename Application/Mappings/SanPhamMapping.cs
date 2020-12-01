@@ -21,7 +21,8 @@ namespace Application.Mappings
                 IDNhaCungCap = sanPham.IDNhaCungCap,
                 BaoHanh = sanPham.BaoHanh,
                 SoLuong = sanPham.SoLuong,
-                Gia = sanPham.Gia
+                Gia = sanPham.Gia,
+                HinhAnh = sanPham.HinhAnh
             };
         }
 
@@ -36,7 +37,8 @@ namespace Application.Mappings
                 IDNhaCungCap = sanPhamDTO.IDNhaCungCap,
                 BaoHanh = sanPhamDTO.BaoHanh,
                 SoLuong = sanPhamDTO.SoLuong,
-                Gia = sanPhamDTO.Gia
+                Gia = sanPhamDTO.Gia,
+                HinhAnh = sanPhamDTO.HinhAnh
             };
         }
     }
