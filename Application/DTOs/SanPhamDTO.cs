@@ -24,5 +24,6 @@ namespace Application.DTOs
 
         public float Gia { get; set; }
 
+        public string HinhAnh { get; set; }
     }
 }

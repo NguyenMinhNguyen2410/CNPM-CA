@@ -33,5 +33,7 @@ namespace Domain.Entities
         [Column(TypeName = "float")]
         public float Gia{get; set;}
 
+        [Column(TypeName = "string")]
+        public string HinhAnh { get; set; }
     }
 }
