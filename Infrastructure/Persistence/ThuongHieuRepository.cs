@@ -15,8 +15,39 @@ namespace Infrastructure.Persistence
         {
             this._conText = conText;
         }
-        
-        
+
+        public IEnumerable<ThuongHieu> getAll()
+        {
+            var list = _conText.thuongHieu.ToList();
+            return list;
+        }
+
+        public ThuongHieu GetThuongHieu(string maThuongHieu)
+        {
+            return _conText.thuongHieu.Find(maThuongHieu); //tìm đối tượng dựa trên mã xong trả về đối tượng tương ứng
+        }
+
+        public void SuaThuongHieu(ThuongHieu thuongHieu)
+        {
+            _conText.thuongHieu.Update(thuongHieu);
+            _conText.SaveChanges();
+        }
+
+        public void ThemThuongHieu(ThuongHieu thuongHieu)
+        {
+            _conText.thuongHieu.Add(thuongHieu);
+            _conText.SaveChanges();
+        }
+
+        public void XoaThuongHieu(string maThuongHieu)
+        {
+            var thuongHieuDaTimThay = _conText.thuongHieu.Find(maThuongHieu);
+            _conText.thuongHieu.Remove(thuongHieuDaTimThay);
+            _conText.SaveChanges();
+
+        }
+
+
         //Viết chức năng ở đây, xem mẫu ở SanPhamRepository.cs
     }
 }

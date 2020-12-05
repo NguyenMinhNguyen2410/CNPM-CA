@@ -4,6 +4,7 @@
 @model mvcDongHo.Areas.Admin.ViewModels.ThuongHieuView;
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    
 }
 <!-- begin search  -->
 <br>
@@ -39,16 +40,30 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>
-                <button type="submit" class="btn btn-block btn-warning" asp-area="Admin" asp-controller="QuanLiLoaiDay" asp-action="Index">Sửa</button>
-            </td>
-            <td>
-                <button type="submit" class="btn btn-block btn-danger">Xóa</button>
-            </td>
-        </tr>
+        @if (ViewBag.List != null)
+        {
+            @foreach (var item in ViewBag.List)
+            {
+                <tr>
+                    <td>@item.IDThuongHieu</td>
+                    <td>@item.TenThuongHieu</td>
+                    <td>
+                        <a class="btn btn-block btn-warning" asp-area="Admin" asp-controller="QuanLiThuongHieu" asp-action="SuaThuongHieu" asp-route-id="@item.IDThuongHieu">Sửa</a>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-block btn-danger">Xóa</button>
+                    </td>
+                </tr>
+            }
+        }
+        else 
+        {
+            <tr>
+                <td>Chưa có dữ liệu truyền vào</td>
+            </tr>
+        }
     </tbody>
+
 </table>
+
 <!--end table-->
