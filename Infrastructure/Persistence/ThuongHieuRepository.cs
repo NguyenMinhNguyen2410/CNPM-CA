@@ -15,27 +15,36 @@ namespace Infrastructure.Persistence
         {
             this._conText = conText;
         }
-        //Viết chức năng ở đây, xem mẫu ở SanPhamRepository.cs
-        public void themThuongHieu(ThuongHieu thuongHieu)
+
+        public IEnumerable<ThuongHieu> getAll()
         {
-            _conText.ThuongHieu.Add(thuongHieu);//gọi biến thuongHieu ở donghocontext thêm vào database
-            _conText.SaveChanges();//lưu lại thay đổi
+            var list = _conText.thuongHieu.ToList();
+            return list;
         }
 
-        // public IEnumerable<ThuongHieu> getAll()
-        // {
-        //     var listThuongHieu = _conText.ThuongHieu.ToList();
-        //     return listThuongHieu;
-        // }
-        // public void suaThuongHieu(ThuongHieu thuongHieu)
-        // {
-        //     _conText.ThuongHieu.Add(thuongHieu);//gọi biến thuongHieu ở donghocontext thêm vào database
-        //     _conText.SaveChanges();//lưu lại thay đổi
-        // }
-        // public void xoaThuongHieu(ThuongHieu thuongHieu)
-        // {
-        //     _conText.ThuongHieu.Add(thuongHieu);//gọi biến thuongHieu ở donghocontext thêm vào database
-        //     _conText.SaveChanges();//lưu lại thay đổi
-        // }
+        public ThuongHieu GetThuongHieu(string maThuongHieu)
+        {
+            return _conText.thuongHieu.Find(maThuongHieu); //tìm đối tượng dựa trên mã xong trả về đối tượng tương ứng
+        }
+
+        public void SuaThuongHieu(ThuongHieu thuongHieu)
+        {
+            _conText.thuongHieu.Update(thuongHieu);
+            _conText.SaveChanges();
+        }
+
+        public void ThemThuongHieu(ThuongHieu thuongHieu)
+        {
+            _conText.thuongHieu.Add(thuongHieu);
+            _conText.SaveChanges();
+        }
+
+        public void XoaThuongHieu(string maThuongHieu)
+        {
+            var thuongHieuDaTimThay = _conText.thuongHieu.Find(maThuongHieu);
+            _conText.thuongHieu.Remove(thuongHieuDaTimThay);
+            _conText.SaveChanges();
+
+        }
     }
 }
