@@ -13,10 +13,10 @@ namespace Application.Services
     
     public class LoaiDayServices : ILoaiDayServices
     {
-        private readonly ILoaiDayRepository _LoaiDayRepository;//Tạo biến chứa dữ liệu 
-        public LoaiDayServices(ILoaiDayRepository LoaiDayRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
+        private readonly ILoaiDayRepository _loaiDayRepository;//Tạo biến chứa dữ liệu 
+        public LoaiDayServices(ILoaiDayRepository loaiDayRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
         {
-            _LoaiDayRepository = LoaiDayRepository;
+            _loaiDayRepository = loaiDayRepository;
         }
     }
 }

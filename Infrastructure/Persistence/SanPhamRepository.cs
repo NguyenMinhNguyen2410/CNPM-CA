@@ -28,12 +28,12 @@ namespace Infrastructure.Persistence
         }
         public void suaSanPham(SanPham sanPham)
         {
-            _conText.sanPham.Add(sanPham);//gọi biến sanPham ở donghocontext thêm vào database
+            _conText.sanPham.Update(sanPham);//gọi biến sanPham ở donghocontext thêm vào database
             _conText.SaveChanges();//lưu lại thay đổi
         }
         public void xoaSanPham(SanPham sanPham)
         {
-            _conText.sanPham.Add(sanPham);//gọi biến sanPham ở donghocontext thêm vào database
+            _conText.sanPham.Remove(sanPham);//gọi biến sanPham ở donghocontext thêm vào database
             _conText.SaveChanges();//lưu lại thay đổi
         }
     }

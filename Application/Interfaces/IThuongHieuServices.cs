@@ -18,5 +18,6 @@ namespace Application.Interfaces
 
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu);
         IEnumerable<ThuongHieuDTO> getAll();
+
     }
 }
