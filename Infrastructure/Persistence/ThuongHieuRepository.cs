@@ -18,7 +18,7 @@ namespace Infrastructure.Persistence
         //Viết chức năng ở đây, xem mẫu ở SanPhamRepository.cs
         public void themThuongHieu(ThuongHieu thuongHieu)
         {
-            _conText.ThuongHieu.Add(thuongHieu);//gọi biến thuongHieu ở donghocontext thêm vào database
+            _conText.thuongHieu.Add(thuongHieu);//gọi biến thuongHieu ở donghocontext thêm vào database
             _conText.SaveChanges();//lưu lại thay đổi
         }
 
