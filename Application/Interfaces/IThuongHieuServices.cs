@@ -1,4 +1,5 @@
 using Application.DTOs;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,14 @@ namespace Application.Interfaces
 {
     public interface IThuongHieuServices
     {
-        // public void themThuongHieu(ThuongHieuDTO thuongHieu);
-        // public void suaThuongHieu(ThuongHieuDTO thuongHieu);
-        // public void xoaThuongHieu(ThuongHieuDTO thuongHieu);
+        public void themThuongHieu(ThuongHieuDTO thuongHieu);
+
+        public void suaThuongHieu(ThuongHieuDTO thuongHieu);
+
+        public void xoaThuongHieu(string maThuongHieu);
+
+        public ThuongHieuDTO GetThuongHieu(string maThuongHieu);
+        IEnumerable<ThuongHieuDTO> getAll();
+
     }
 }

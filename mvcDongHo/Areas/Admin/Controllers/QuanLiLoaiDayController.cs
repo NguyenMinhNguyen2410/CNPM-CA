@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Application.DTOs;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,14 @@ namespace mvcDongHo.Areas.Admin.Controllers
         public IActionResult ThemLoaiDay()
         {
             return View();
+        }
+        public IActionResult SuaLoaiDay()
+        {
+            return View();
+        }
+        public IActionResult SuaLoaiDayData(LoaiDayDTO loaiDayDTO)
+        {
+            return View(nameof(Index));
         }
     }
 }

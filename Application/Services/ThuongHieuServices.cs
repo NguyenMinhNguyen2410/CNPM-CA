@@ -1,6 +1,7 @@
 using Application.DTOs;
 using Application.Interfaces;
 using Application.Mappings;
+using Domain.Entities;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,17 +19,35 @@ namespace Application.Services
         {
             _thuongHieuRepository = thuongHieuRepository;
         }
-        // public void themThuongHieu(ThuongHieuDTO ThuongHieuDTO)
-        // {
-        //     _thuongHieuRepository.themThuongHieu(thuongHieuDTO.MappingThuongHieu());
-        // }
-        // public void suaThuongHieu(ThuongHieuDTO ThuongHieuDTO)
-        // {
-        //     _thuongHieuRepository.suaThuongHieu(thuongHieuDTO.MappingThuongHieu());
-        // }
-        // public void xoaThuongHieu(ThuongHieuDTO ThuongHieuDTO)
-        // {
-        //     _thuongHieuRepository.xoaThuongHieu(thuongHieuDTO.MappingThuongHieu());
-        // }
+
+
+        public IEnumerable<ThuongHieuDTO> getAll()
+        {
+           return _ThuongHieuRepository.getAll().MappingThuongHieuDTO1();
+        }
+
+        public ThuongHieuDTO GetThuongHieu(string maThuongHieu)
+        {
+           return  _ThuongHieuRepository.GetThuongHieu(maThuongHieu).MappingThuongHieuDTO();
+
+        }
+        //ủa đúng rồi m
+        //em thấy nó đúng rồi mà ta
+
+        public void suaThuongHieu(ThuongHieuDTO thuongHieuDTO)
+        {
+            _ThuongHieuRepository.SuaThuongHieu(thuongHieuDTO.MappingThuongHieu());
+        }
+
+        public void themThuongHieu(ThuongHieuDTO thuongHieuDTO)
+        {
+            _ThuongHieuRepository.ThemThuongHieu(thuongHieuDTO.MappingThuongHieu());
+        }
+
+
+        public void xoaThuongHieu(string maThuongHieu)
+        {
+            _ThuongHieuRepository.XoaThuongHieu(maThuongHieu);
+        }
     }
 }
