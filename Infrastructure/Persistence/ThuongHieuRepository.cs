@@ -46,8 +46,5 @@ namespace Infrastructure.Persistence
             _conText.SaveChanges();
 
         }
-
-
-        //Viết chức năng ở đây, xem mẫu ở SanPhamRepository.cs
     }
 }
