@@ -5,14 +5,15 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+// using System.Data.Entity.IDatabaseInitializer<TContext>;
 using Domain.Entities; 
 namespace Infrastructure.Persistence
 {
     public class DongHoContext: DbContext
     {
-        public DongHoContext(DbContextOptions<DongHoContext> options)
-            : base(options)
+        public DongHoContext(DbContextOptions<DongHoContext> options): base(options)
         {
+            
         }
         public DbSet<ChiTietHoaDonBan> chiTietHoaDonBan{get; set;}     
         public DbSet<ChiTietHoaDonNhap> chiTietHoaDonNhap{get; set;}

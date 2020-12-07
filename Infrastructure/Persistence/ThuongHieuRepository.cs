@@ -41,6 +41,7 @@ namespace Infrastructure.Persistence
 
         public void XoaThuongHieu(string maThuongHieu)//xóa một đối tượng ở database
         {
+            
             var thuongHieuDaTimThay = _conText.thuongHieu.Find(maThuongHieu);
             _conText.thuongHieu.Remove(thuongHieuDaTimThay);
             _conText.SaveChanges();

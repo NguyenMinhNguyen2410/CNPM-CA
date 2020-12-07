@@ -22,29 +22,29 @@ namespace Application.Services
 
         public IEnumerable<ThuongHieuDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
-           return _ThuongHieuRepository.getAll().MappingThuongHieuDTO1();
+           return _thuongHieuRepository.getAll().MappingThuongHieuDTO1();
         }
 
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu)
         {
-           return  _ThuongHieuRepository.GetThuongHieu(maThuongHieu).MappingThuongHieuDTO();
+           return  _thuongHieuRepository.GetThuongHieu(maThuongHieu).MappingThuongHieuDTO();
 
         }
 
         public void suaThuongHieu(ThuongHieuDTO thuongHieuDTO)
         {
-            _ThuongHieuRepository.SuaThuongHieu(thuongHieuDTO.MappingThuongHieu());
+            _thuongHieuRepository.SuaThuongHieu(thuongHieuDTO.MappingThuongHieu());
         }
 
         public void themThuongHieu(ThuongHieuDTO thuongHieuDTO)
         {
-            _ThuongHieuRepository.ThemThuongHieu(thuongHieuDTO.MappingThuongHieu());
+            _thuongHieuRepository.ThemThuongHieu(thuongHieuDTO.MappingThuongHieu());
         }
 
 
         public void xoaThuongHieu(string maThuongHieu)
         {
-            _ThuongHieuRepository.XoaThuongHieu(maThuongHieu);
+            _thuongHieuRepository.XoaThuongHieu(maThuongHieu);
         }
     }
 }

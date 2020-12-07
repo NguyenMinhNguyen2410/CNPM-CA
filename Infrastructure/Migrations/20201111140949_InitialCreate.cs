@@ -118,7 +118,8 @@ namespace Infrastructure.Migrations
                     IDNhaCungCap = table.Column<string>(type: "char(5)", nullable: true),
                     BaoHanh = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
-                    Gia = table.Column<double>(type: "float", nullable: false)
+                    Gia = table.Column<double>(type: "float", nullable: false),
+                    HinhAnh = table.Column<string>(type: "nvarchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -56,16 +56,19 @@ namespace mvcDongHo.Areas.Admin.Controllers
 
         public IActionResult SuaThuongHieu(string id)//truyền mã vào để sửa, mục đích là để khi bấm nút sửa dựa vào mã ở
             //giao diện QuanLiThuongHieu/Index truy xuất xuống services/reponsitory để lấy đối tượng thương hiệu lên và gán dữ liệu cho trang SuaThuongHieu
+
         {
             ViewBag.SuaThuongHieu = _thuongHieuServices.GetThuongHieu(id);//gọi hàm lấy một đối tượng thương hiệu bên services và gán cho viewbag
             return View();
         }
+
 
         public IActionResult XoaThuongHieuData(string id) //truyền mã vào để xóa một đối tượng
         {
             _thuongHieuServices.xoaThuongHieu(id);//gọi hàm xóa bên services
             Index();//chạy lại hàm index và các dòng trong index, mục đích là để xóa xong nó load lại trang luôn
             return View(nameof(Index)); // trả về view
+
         }
     }
 }
