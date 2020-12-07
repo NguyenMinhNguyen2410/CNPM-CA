@@ -20,7 +20,7 @@ namespace Application.Services
             _ThuongHieuRepository = ThuongHieuRepository;
         }
 
-        public IEnumerable<ThuongHieuDTO> getAll()
+        public IEnumerable<ThuongHieuDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
            return _ThuongHieuRepository.getAll().MappingThuongHieuDTO1();
         }
@@ -30,8 +30,6 @@ namespace Application.Services
            return  _ThuongHieuRepository.GetThuongHieu(maThuongHieu).MappingThuongHieuDTO();
 
         }
-        //ủa đúng rồi m
-        //em thấy nó đúng rồi mà ta
 
         public void suaThuongHieu(ThuongHieuDTO thuongHieuDTO)
         {

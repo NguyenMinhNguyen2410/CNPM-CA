@@ -1,15 +1,14 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model mvcDongHo.Areas.Admin.ViewModels.ThuongHieuView;
+@model mvcDongHo.Areas.Admin.ViewModels.ThuongHieuView; <!--để nó hiểu những biến trong viewmodel-->
 @{
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-    
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml"; //dùng lại layout ở share
+
 }
-<!-- begin search  -->
 <br>
 <div>
-    <!-- Main content -->
+    <!-- Thanh tìm kiếm -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -40,30 +39,59 @@
         </tr>
     </thead>
     <tbody>
-        @if (ViewBag.List != null)
+        @if (ViewBag.List != null) 
         {
-            @foreach (var item in ViewBag.List)
+            @foreach (var item in ViewBag.List)//tạo vòng lặp để duyệt từng phần tử trong viewbag để show ra
             {
+
                 <tr>
-                    <td>@item.IDThuongHieu</td>
-                    <td>@item.TenThuongHieu</td>
+                    <td>@item.IDThuongHieu</td><!--show ra mã thương hiệu-->
+                    <td>@item.TenThuongHieu</td><!--show ra tên thương hiệu-->
                     <td>
                         <a class="btn btn-block btn-warning" asp-area="Admin" asp-controller="QuanLiThuongHieu" asp-action="SuaThuongHieu" asp-route-id="@item.IDThuongHieu">Sửa</a>
+                        <!--đi vào area Admin, QuanLiThuongHieuController thực hiện hàm SuaThuongHieu, còn cái asp-route-id thì là nó định danh id cho cái nút sửa để khi click vào mình lấy được cái mã-->
                     </td>
                     <td>
-                        <button type="submit" class="btn btn-block btn-danger">Xóa</button>
+                        <button id="xoathuonghieu" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-block btn-danger" data-id="@item.IDThuongHieu">Xóa</button>
+                        <!--phần data-toggle và data-target để show cái model ở dưới của bootstrap, data-id là gán IDThuonghieu cho thằng data-id -->
                     </td>
                 </tr>
+
             }
         }
-        else 
-        {
-            <tr>
-                <td>Chưa có dữ liệu truyền vào</td>
-            </tr>
-        }
+
     </tbody>
 
 </table>
-
+<!--Thẻ show lên xác nhận xóa hay không-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Thông báo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa?
+            </div>
+            <div class="modal-footer" id="footer-del">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!--Kết thúc thẻ xác nhận không có gì đặc biệt-->
 <!--end table-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--thêm cái link để xài jquery cái này anh An chỉ tui-->
+<script type="text/javascript">//viết jquery, do xài cái model để xác nhận có muốn xóa hay không thì mình không lấy mã trực tiếp như cái sửa được nên phải viết thêm cái này 
+    $("button#xoathuonghieu").click(function ()//tạo sự kiên click cho cái button ở trên theo cú pháp của jquery: "tenthe#mã thẻ"
+    {
+        var id = $(this).data("id");//gán IDThuongHieu đã được lưu vào data-id ở trên để gán vào biến id
+        var obj = '<a class="btn btn-success" href="https://localhost:44365/Admin/QuanLiThuongHieu/XoaThuongHieuData/' + id + '">Có</a>'
+            + '<button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>';//tạo biến obj để lưu lại cái html mình cần xuất ra, cái này tui không quá rõ
+        //nhưng mà cứ làm theo thôi, hok khó
+        $("div#footer-del").html(obj);//gọi cái thẻ div có mã là footer-del để chèn phần html zo
+    });
+</script>

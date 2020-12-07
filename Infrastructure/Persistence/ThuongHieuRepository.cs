@@ -27,19 +27,19 @@ namespace Infrastructure.Persistence
             return _conText.thuongHieu.Find(maThuongHieu); //tìm đối tượng dựa trên mã xong trả về đối tượng tương ứng
         }
 
-        public void SuaThuongHieu(ThuongHieu thuongHieu)
+        public void SuaThuongHieu(ThuongHieu thuongHieu)//hàm sửa vào database
         {
             _conText.thuongHieu.Update(thuongHieu);
             _conText.SaveChanges();
         }
 
-        public void ThemThuongHieu(ThuongHieu thuongHieu)
+        public void ThemThuongHieu(ThuongHieu thuongHieu)//hàm thêm vào database
         {
             _conText.thuongHieu.Add(thuongHieu);
             _conText.SaveChanges();
         }
 
-        public void XoaThuongHieu(string maThuongHieu)
+        public void XoaThuongHieu(string maThuongHieu)//xóa một đối tượng ở database
         {
             var thuongHieuDaTimThay = _conText.thuongHieu.Find(maThuongHieu);
             _conText.thuongHieu.Remove(thuongHieuDaTimThay);
