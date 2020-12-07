@@ -35,8 +35,7 @@ namespace Application.Mappings
             {
                 yield return thuongHieu.MappingThuongHieuDTO();
             }
-        }/// cái hàm này nè là e đang lấy dữ liệu từ entity lên r chuyển sang DTO là e thấy nó truyền dữ liệu lên là của entity tại a chưa hiểu cái yiel này lắm
-
+        }// cái hàm này nè là đang lấy dữ liệu từ entity lên r chuyển sang DTO 
         public static IEnumerable<ThuongHieuDTO> MappingThuongHieuDTO1(this IEnumerable<ThuongHieu> thuongHieuS)
         {
             List<ThuongHieuDTO> listreturn = new List<ThuongHieuDTO>(); 
