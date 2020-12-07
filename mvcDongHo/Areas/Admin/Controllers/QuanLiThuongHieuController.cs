@@ -53,17 +53,17 @@ namespace mvcDongHo.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult SuaThuongHieu( string maThuongHieu)
+        public IActionResult SuaThuongHieu(string maThuongHieu)
         {
             var tH = _thuongHieuServices.GetThuongHieu(maThuongHieu);
             return View(tH);
         }
 
-        public IActionResult XoaThuongHieuData(ThuongHieuView thuongHieuView)
+        public IActionResult XoaThuongHieu(string maThuongHieu)
         {
             if(ModelState.IsValid)
             {
-                _thuongHieuServices.xoaThuongHieu(thuongHieuView.thuongHieuDTO.IDThuongHieu);
+                _thuongHieuServices.xoaThuongHieu(maThuongHieu);
                 return View(nameof(Index));
             }
             return View(nameof(Index));

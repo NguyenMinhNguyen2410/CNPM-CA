@@ -51,7 +51,7 @@
                         <a class="btn btn-block btn-warning" asp-area="Admin" asp-controller="QuanLiThuongHieu" asp-action="SuaThuongHieu" asp-route-id="@item.IDThuongHieu">Sửa</a>
                     </td>
                     <td>
-                        <button type="submit" class="btn btn-block btn-danger">Xóa</button>
+                        <a class="btn btn-block btn-danger" asp-area="Admin" asp-route-id="@item.IDThuongHieu" asp-controller="QuanLiThuongHieu" asp-action="XoaThuongHieu">Xóa</a>
                     </td>
                 </tr>
             }

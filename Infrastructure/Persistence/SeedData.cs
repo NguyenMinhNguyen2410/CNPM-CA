@@ -1131,68 +1131,6 @@ namespace Infrastructure.Persistence
                     );
                 context.SaveChanges();
 
-                //ChiTietHoaDonNhap
-                if (context.chiTietHoaDonNhap.Any()) return;
-                context.chiTietHoaDonNhap.AddRange(
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 1,
-                        IDHoaDonNhap = "DN001",
-                        IDSanPham = "SP025",
-                        SoLuong = 2,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 2,
-                        IDHoaDonNhap = "DN001",
-                        IDSanPham = "SP045",
-                        SoLuong = 1,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 3,
-                        IDHoaDonNhap = "DN001",
-                        IDSanPham = "SP060",
-                        SoLuong = 3,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 4,
-                        IDHoaDonNhap = "DN002",
-                        IDSanPham = "SP066",
-                        SoLuong = 5,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 5,
-                        IDHoaDonNhap = "DN002",
-                        IDSanPham = "SP058",
-                        SoLuong = 4,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 6,
-                        IDHoaDonNhap = "DN003",
-                        IDSanPham = "SP018",
-                        SoLuong = 3,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 7,
-                        IDHoaDonNhap = "DN004",
-                        IDSanPham = "SP050",
-                        SoLuong = 2,
-                    },
-                    new Domain.Entities.ChiTietHoaDonNhap
-                    {
-                        IDChiTietHoaDonNhap = 8,
-                        IDHoaDonNhap = "DN004",
-                        IDSanPham = "SP053",
-                        SoLuong = 4,
-                    }
-                    );
-                context.SaveChanges();
-
                 //HoaDonBan
                 if (context.hoaDonBan.Any()) return;
                 context.hoaDonBan.AddRange(
@@ -1201,28 +1139,32 @@ namespace Infrastructure.Persistence
                         IDHoaDonBan = "DB001",
                         IDKhachHang = "KH003",
                         ThanhTien = float.Parse("10000000"),
-                        NgayBan = DateTime.Parse("2020-10-20")
+                        NgayBan = DateTime.Parse("2020-10-20"),
+                        TrangThai = " "
                     },
                     new Domain.Entities.HoaDonBan
                     {
                         IDHoaDonBan = "DB002",
                         IDKhachHang = "KH005",
                         ThanhTien = float.Parse("4650000"),
-                        NgayBan = DateTime.Parse("2020-11-20")
+                        NgayBan = DateTime.Parse("2020-11-20"),
+                        TrangThai = " "
                     },
                     new Domain.Entities.HoaDonBan
                     {
                         IDHoaDonBan = "DB003",
                         IDKhachHang = "KH004",
                         ThanhTien = float.Parse("5710000"),
-                        NgayBan = DateTime.Parse("2020-11-27")
+                        NgayBan = DateTime.Parse("2020-11-27"),
+                        TrangThai = " "
                     }, 
                     new Domain.Entities.HoaDonBan
                     {
                         IDHoaDonBan = "DB004",
                         IDKhachHang = "KH001",
                         ThanhTien = float.Parse("9217000"),
-                        NgayBan = DateTime.Parse("2020-12-01")
+                        NgayBan = DateTime.Parse("2020-12-01"),
+                        TrangThai = " "
                     }
                     );
                 context.SaveChanges();
@@ -1232,55 +1174,106 @@ namespace Infrastructure.Persistence
                 context.chiTietHoaDonBan.AddRange(
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 1,
                         IDHoaDon = "DB001",
                         IDSanPham = "SP005",
-                        SoLuong = 1,
+                        SoLuong = 1
                     },
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 2,
                         IDHoaDon = "DB001",
                         IDSanPham = "SP044",
-                        SoLuong = 1,
+                        SoLuong = 1
                     },
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 3,
                         IDHoaDon = "DB002",
                         IDSanPham = "SP059",
-                        SoLuong = 1,
+                        SoLuong = 1
                     },
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 4,
                         IDHoaDon = "DB003",
                         IDSanPham = "SP055",
-                        SoLuong = 1,
+                        SoLuong = 1
                     },
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 5,
                         IDHoaDon = "DB004",
                         IDSanPham = "SP012",
-                        SoLuong = 1,
+                        SoLuong = 1
                     },
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 6,
                         IDHoaDon = "DB004",
                         IDSanPham = "SP034",
-                        SoLuong = 1,
+                        SoLuong = 1
                     },
                     new Domain.Entities.ChiTietHoaDonBan
                     {
-                        IDChiTietHoaDonBan = 7,
                         IDHoaDon = "DB004",
                         IDSanPham = "SP027",
-                        SoLuong = 1,
+                        SoLuong = 1
                     }
                     );
                 context.SaveChanges();
+
+                //ChiTietHoaDonNhap
+                if (context.chiTietHoaDonNhap.Any()) return;
+                context.chiTietHoaDonNhap.AddRange(
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN001",
+                        IDSanPham = "SP025",
+                        SoLuong = 2
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN001",
+                        IDSanPham = "SP045",
+                        SoLuong = 1
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN001",
+                        IDSanPham = "SP060",
+                        SoLuong = 3
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN002",
+                        IDSanPham = "SP066",
+                        SoLuong = 5
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN002",
+                        IDSanPham = "SP058",
+                        SoLuong = 4
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN003",
+                        IDSanPham = "SP018",
+                        SoLuong = 3
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN004",
+                        IDSanPham = "SP050",
+                        SoLuong = 2
+                    },
+                    new Domain.Entities.ChiTietHoaDonNhap
+                    {
+                        IDHoaDonNhap = "DN004",
+                        IDSanPham = "SP053",
+                        SoLuong = 4
+                    }
+                    );
+                context.SaveChanges();
+
+                
+                
+                
             }
         }
     }

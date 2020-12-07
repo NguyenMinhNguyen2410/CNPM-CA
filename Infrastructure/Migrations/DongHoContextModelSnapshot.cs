@@ -182,6 +182,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("TenSanPham")
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("HinhAnh")
+                        .HasColumnType("nvarchar(50)");
+                        
                     b.HasKey("IDSanPham");
 
                     b.ToTable("sanPham");
