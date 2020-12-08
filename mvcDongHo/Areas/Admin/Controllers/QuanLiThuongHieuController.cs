@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.DTOs;
 
 namespace mvcDongHo.Areas.Admin.Controllers
 {
@@ -17,11 +18,17 @@ namespace mvcDongHo.Areas.Admin.Controllers
         {
             _thuongHieuServices = thuongHieuServices;
         }
-        public IActionResult Index()
+        public IActionResult Index(int pageIndex = 1)//pageIndex được mặc định là 1 nếu không có truyền vào
         {
-            var list = _thuongHieuServices.getAll();//hàm lấy tất cả các đối tượng ở dưới database để show thông tin sản phẩm lên
-            ViewBag.List = list;//lưu danh sách vừa lấy được vào viewbag đê show ra bên index
-            return View();
+            int count;//Tổng số lượng thương hiệu
+            int pageSize = 3;//Số lượng thương hiệu trong 1 trang
+            var list = _thuongHieuServices.getAll(pageIndex,pageSize,out count);//Hàm này lấy thương hiệu lên theo số trang , số lượng thương hiệu 1 trang , gắn lại tổng sản phẩm vào bién count
+            var indexVM = new ThuongHieuView()
+            {
+                ThuongHieu = new PaginatedList<ThuongHieuDTO>(list,count, pageIndex, pageSize)
+            };
+            //Trả về view + biến indexVM đang giữ list thương hiệu
+            return View(indexVM);
         }
 
         public IActionResult ThemThuongHieu()
