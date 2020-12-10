@@ -18,5 +18,9 @@ namespace Application.Services
         {
             _hoaDonBanRepository = hoaDonBanRepository;
         }
+        public IEnumerable<HoaDonBanDTO> getAll(int pageIndex, int pageSize,string search,string Type,float Tien,out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+           return _hoaDonBanRepository.getAll(pageIndex,pageSize,search,Type,Tien,out count).MappingHoaDonBanList();
+        }
     }
 }

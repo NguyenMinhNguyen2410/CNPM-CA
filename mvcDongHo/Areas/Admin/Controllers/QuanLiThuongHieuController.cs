@@ -1,13 +1,11 @@
-﻿using Application.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using mvcDongHo.Areas.Admin.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using mvcDongHo.Areas.Admin.ViewModels;
+using Application.Interfaces;
 using Application.DTOs;
-using System.Reflection;  // reflection namespace
-using Microsoft.AspNetCore.Mvc.Rendering;
 namespace mvcDongHo.Areas.Admin.Controllers
 {
     [Area("Admin")] //để nó hiểu được những class trong Admin
@@ -82,18 +80,6 @@ namespace mvcDongHo.Areas.Admin.Controllers
             return View(nameof(Index)); // trả về view
 
         }
-        //Ajax
-        // public JsonResult SearchThuongHieu (string search){
-        //     int pageIndex=1;
-        //     int count;//Tổng số lượng thương hiệu
-        //     int pageSize = 3;//Số lượng thương hiệu trong 1 trang
-        //     var list = _thuongHieuServices.getAll(pageIndex,pageSize,search,out count);//Hàm này lấy thương hiệu lên theo số trang , số lượng thương hiệu 1 trang , gắn lại tổng sản phẩm vào bién count
-        //     var indexVM = new ThuongHieuView()
-        //     {
-        //         ThuongHieu = new PaginatedList<ThuongHieuDTO>(list,count, pageIndex, pageSize)
-        //     };
-        //     //Trả về view + biến indexVM đang giữ list thương hiệu
-        //     return Json(indexVM);
-        // }
+        
     }
 }

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.DTOs;
-using mvcDongHo.Areas.Admin.ViewModels;
-using Microsoft.AspNetCore.Mvc.Rendering;
 namespace mvcDongHo.Areas.Admin.ViewModels
 {
     public class ThuongHieuView

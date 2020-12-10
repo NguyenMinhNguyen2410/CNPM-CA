@@ -31,5 +31,15 @@ namespace Application.Mappings
                 SoLuong=chiTietHoaDonBanDTO.SoLuong
             };
         }
+        public static IEnumerable<ChiTietHoaDonBanDTO> MappingChiTietHoaDonBanList(this IEnumerable<ChiTietHoaDonBan> ChiTietHoaDonBanS)
+        {
+            List<ChiTietHoaDonBanDTO> listreturn = new List<ChiTietHoaDonBanDTO>(); 
+            foreach (var ChiTietHoaDonBan in ChiTietHoaDonBanS)
+            {
+                var obnow = ChiTietHoaDonBan.MappingChiTietHoaDonBanDTO();
+                listreturn.Add(obnow);
+            }
+            return listreturn;
+        }
     }
 }

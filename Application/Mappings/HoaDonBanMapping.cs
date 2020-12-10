@@ -33,5 +33,15 @@ namespace Application.Mappings
                 TrangThai=hoaDonBanDTO.TrangThai
             };
         }
+        public static IEnumerable<HoaDonBanDTO> MappingHoaDonBanList(this IEnumerable<HoaDonBan> HoaDonBanS)
+        {
+            List<HoaDonBanDTO> listreturn = new List<HoaDonBanDTO>(); 
+            foreach (var HoaDonBan in HoaDonBanS)
+            {
+                var obnow = HoaDonBan.MappingHoaDonBanDTO();
+                listreturn.Add(obnow);
+            }
+            return listreturn;
+        }
     }
 }

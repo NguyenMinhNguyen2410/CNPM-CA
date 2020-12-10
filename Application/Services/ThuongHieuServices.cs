@@ -22,7 +22,7 @@ namespace Application.Services
 
         public IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,string search,string Type,out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
-           return _thuongHieuRepository.getAll(pageIndex,pageSize,search,Type,out count).MappingThuongHieuDTO1();
+           return _thuongHieuRepository.getAll(pageIndex,pageSize,search,Type,out count).MappingThuongHieuList();
         }
         
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu)
