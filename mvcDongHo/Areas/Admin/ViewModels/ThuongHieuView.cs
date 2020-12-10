@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.DTOs;
 using mvcDongHo.Areas.Admin.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 namespace mvcDongHo.Areas.Admin.ViewModels
 {
     public class ThuongHieuView
@@ -11,5 +12,9 @@ namespace mvcDongHo.Areas.Admin.ViewModels
         public ThuongHieuDTO thuongHieuDTO { get; set; }
         //Hàm để tạo thành list kiểu ThuongHieuDTO
         public PaginatedList<ThuongHieuDTO> ThuongHieu { get; set; }
+        //Biến chứa text search
+        public string searchString { get; set; }
+        //Biến chữa loại search
+        public string Type { get; set; }
     }
 }

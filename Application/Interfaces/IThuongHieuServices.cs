@@ -18,7 +18,7 @@ namespace Application.Interfaces
 
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu);
         
-        IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,out int count);
+        IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,string search,string Type,out int count);
 
     }
 }
