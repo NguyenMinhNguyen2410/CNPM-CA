@@ -10,5 +10,8 @@ namespace Application.Interfaces
     public interface ITaiKhoanKHServices
     {
        bool login(string taiKhoan, string matKhau);
+        public IEnumerable<TaiKhoanKHDTO> getAll();
+        public TaiKhoanKHDTO TimTK(string TaiKhoan, string MatKhau, string IDKhachHang);
+        public void ThemTK(TaiKhoanKHDTO taiKhoanKHDTO);
     }
 }

@@ -1,5 +1,5 @@
 using Application.DTOs;
-// using Domain.Entities;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace Application.Interfaces
 
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu);
         
-        IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,string search,string Type,out int count);
+        IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,out int count);
 
     }
 }
