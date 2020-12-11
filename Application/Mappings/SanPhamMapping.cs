@@ -41,5 +41,22 @@ namespace Application.Mappings
                 HinhAnh = sanPhamDTO.HinhAnh
             };
         }
+        public static IEnumerable<SanPhamDTO> MappingSanPhamDTOList(this IEnumerable<SanPham> sanPhamS)
+        {
+            foreach (var sp in sanPhamS)
+            {
+                yield return sp.MappingSanPhamDTO();
+            }
+        }// cái hàm này nè là đang lấy dữ liệu từ entity lên r chuyển sang DTO 
+        public static IEnumerable<SanPhamDTO> MappingSanPhamDTO1(this IEnumerable<SanPham> sanPhamS)
+        {
+            List<SanPhamDTO> listreturn = new List<SanPhamDTO>();
+            foreach (var sp in sanPhamS)
+            {
+                var obnow = sp.MappingSanPhamDTO();
+                listreturn.Add(obnow);
+            }
+            return listreturn;
+        }
     }
 }

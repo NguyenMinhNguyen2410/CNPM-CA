@@ -29,7 +29,14 @@ namespace Application.Mappings
             };
         }
 
-        public static IEnumerable<ThuongHieuDTO> MappingThuongHieuList(this IEnumerable<ThuongHieu> thuongHieuS)
+        public static IEnumerable<ThuongHieuDTO> MappingThuongHieuDTOList(this IEnumerable<ThuongHieu> thuongHieuS)
+        {
+            foreach (var thuongHieu in thuongHieuS)
+            {
+                yield return thuongHieu.MappingThuongHieuDTO();
+            }
+        }// cái hàm này nè là đang lấy dữ liệu từ entity lên r chuyển sang DTO 
+        public static IEnumerable<ThuongHieuDTO> MappingThuongHieuDTO1(this IEnumerable<ThuongHieu> thuongHieuS)
         {
             List<ThuongHieuDTO> listreturn = new List<ThuongHieuDTO>(); 
             foreach (var thuongHieu in thuongHieuS)

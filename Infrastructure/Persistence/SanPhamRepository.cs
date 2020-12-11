@@ -21,10 +21,19 @@ namespace Infrastructure.Persistence
             _conText.SaveChanges();//lưu lại thay đổi
         }
 
-        public IEnumerable<SanPham> getAll()
+        public IEnumerable<SanPham> getAll(int pageIndex, int pageSize, out int count)
         {
-            var listSanPham = _conText.sanPham.ToList();
-            return listSanPham;
+            count = _conText.sanPham.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
+
+            var query = _conText.sanPham.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
+            return query.Skip((pageIndex - 1) * pageSize)
+                        .Take(pageSize).ToList();
+        }
+        public IEnumerable<SanPham> get4sp(int boqua)
+        {
+            var query = _conText.sanPham.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
+            return query.Skip(boqua)
+                        .Take(8).ToList();
         }
         public void suaSanPham(SanPham sanPham)
         {
@@ -35,6 +44,11 @@ namespace Infrastructure.Persistence
         {
             _conText.sanPham.Remove(sanPham);//gọi biến sanPham ở donghocontext thêm vào database
             _conText.SaveChanges();//lưu lại thay đổi
+        }
+        public SanPham Xemsp(string maSanPham)
+        {
+
+            return _conText.sanPham.Find(maSanPham); //tìm đối tượng dựa trên mã xong trả về đối tượng tương ứng
         }
     }
 }

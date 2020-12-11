@@ -16,24 +16,16 @@ namespace Infrastructure.Persistence
             this._conText = conText;
         }
 
-        public IEnumerable<ThuongHieu> getAll(int pageIndex, int pageSize,string search,string Type,out int count)
+        public IEnumerable<ThuongHieu> getAll(int pageIndex, int pageSize,out int count)
         {
-            var query = _conText.thuongHieu.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
-            if(!string.IsNullOrEmpty(search))
-            { 
-                if(Type=="TenThuongHieu"){          
-                    query=query.Where(m => m.TenThuongHieu.Contains(search));
-                }
-                else
-                {
-                    query=query.Where(m => m.IDThuongHieu.Contains(search));
-                }
-            }
             //Gán giá trị cho biến count để truyền giá trị về
-            count=query.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
-            return query.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();//Skip là bỏ qua n phần tử đầu , take là chỉ lấy m phần tử 
+            count=_conText.thuongHieu.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
+
+            var query = _conText.thuongHieu.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
+            return query.Skip((pageIndex - 1) * pageSize)
+                        .Take(pageSize).ToList();//Skip là bỏ qua n phần tử đầu , take là chỉ lấy m phần tử 
         }
-        
+
         public ThuongHieu GetThuongHieu(string maThuongHieu)
         {
 

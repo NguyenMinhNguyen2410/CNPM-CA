@@ -1,8 +1,6 @@
-﻿
-@{
-    ViewBag.Title = "Sản phẩm";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model mvcDongHo.ViewModels.SanPhamView;
+@{ ViewBag.Title = "Sản phẩm";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <!-- Start All Title Box -->
 <div style="background: url(/images/bg1.jpg)" class="all-title-box">
@@ -55,189 +53,44 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
                                 <div class="row">
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="sale">Mới</p>
-                                                </div>
-                                                <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    @if (Model.SanPham != null)
+                                    {
+                                        foreach (var p in Model.SanPham)
+                                        {
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="products-single fix">
+                                <div class="box-img-hover">
+                                    <div class="type-lb">
+                                        <p class="sale">Mới</p>
+                                    </div>
+                                    <img src="@p.HinhAnh" class="img-fluid" alt="Image">
+                                    <div class="mask-icon">
+                                        <ul>
+                                            <li><a data-toggle="tooltip" data-placement="right" title="View" asp-controller="Home" asp-action="Shopdetail" asp-route-id="@p.IDSanPham"><i class="fas fa-eye"></i></a></li>
 
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="new">Mới</p>
-                                                </div>
-                                                <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="sale">Sắp ra mắt</p>
-                                                </div>
-                                                <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="new">Mới</p>
-                                                </div>
-                                                <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="sale">Bán chạy</p>
-                                                </div>
-                                                <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="sale">Mới</p>
-                                                </div>
-                                                <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="sale">Mới</p>
-                                                </div>
-                                                <img src="/images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="sale">Bán chạy</p>
-                                                </div>
-                                                <img src="/images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                        <div class="products-single fix">
-                                            <div class="box-img-hover">
-                                                <div class="type-lb">
-                                                    <p class="new">Sắp ra mắt</p>
-                                                </div>
-                                                <img src="/images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                                                <div class="mask-icon">
-                                                    <ul>
-                                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                    </ul>
-                                                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                            <div class="why-text">
-                                                <h4>Lorem ipsum dolor sit amet</h4>
-                                                <h5> $9.79</h5>
-                                            </div>
-                                        </div>
+                                        </ul>
+                                        <a class="cart" href="#">Thêm vào giỏ hàng</a>
                                     </div>
                                 </div>
+                                <div class="why-text">
+                                    <h4>@p.TenSanPham</h4>
+                                    <h5>@p.Gia</h5>
+                                </div>
                             </div>
+                        </div>}
+                                    }
+
+
+                                </div>
+                            </div>
+                            @{ @* setup nút quay về , trỏ vào hàm HasPreviousPage ở PaginatedList để kiểm tra *@ var prevDisabled = !Model.SanPham.HasPreviousPage ? "disabled" : ""; @* setup nút tiến tới , trỏ vào hàm HasNextPage ở PaginatedList để kiểm tra *@ var nextDisabled = !Model.SanPham.HasNextPage ? "disabled" : ""; }
+                            @* Tạo nút quay về, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
+                            <a style="position:absolute" class="btn btn-dark @prevDisabled"
+                               asp-route-pageIndex="@(Model.SanPham.PageIndex -1)">Previous</a>
+                            @* Tạo nút tiến lên, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
+                            <a style="position:absolute; right:0px" class="btn btn-dark @nextDisabled"
+                               asp-route-pageIndex="@(Model.SanPham.PageIndex +1)">Next</a>
+
                             <div role="tabpanel" class="tab-pane fade" id="list-view">
                                 <div class="list-view-box">
                                     <div class="row">

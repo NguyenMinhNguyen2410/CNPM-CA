@@ -30,7 +30,18 @@ namespace Application.Services
             _taiKhoanRepository = taiKhoanKHRepository;
             //_httpContext = httpContextAccessor.HttpContext;
         }
-
+        public IEnumerable<TaiKhoanKHDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+            return _taiKhoanRepository.getAll().MappingTaiKhoanDTO1();
+        }
+        public TaiKhoanKHDTO TimTK(string TaiKhoan, string MatKhau, string IDKhachHang)
+        {
+            return _taiKhoanRepository.TimTK(TaiKhoan, MatKhau, IDKhachHang).MappingTaiKhoanDTO();
+        }
+        public void ThemTK(TaiKhoanKHDTO taiKhoanKHDTO)
+        {
+            _taiKhoanRepository.ThemTK(taiKhoanKHDTO.MappingTaiKhoan());
+        }
         public bool login(string taiKhoan , string matKhau)
         {
             var list = _taiKhoanRepository.getAll();
