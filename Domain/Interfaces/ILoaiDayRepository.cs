@@ -9,7 +9,13 @@ namespace Domain.Interfaces
 {
     public interface ILoaiDayRepository
     {
-        
+
         //Viết hàm chức năng ở đây, xem mẫu ở ISanPhamRepository.cs
+        IEnumerable<LoaiDay> getAll(int pageIndex, int pageSize, out int count);
+        public void ThemLoaiDay(LoaiDay loaiDay);
+        public void SuaLoaiDay(LoaiDay loaiDay);
+        public void XoaLoaiDay(string maLoaiDay);
+
+        public LoaiDay GetLoaiDay(string maLoaiDay);
     }
 }
