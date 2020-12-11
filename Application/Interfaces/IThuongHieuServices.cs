@@ -17,7 +17,8 @@ namespace Application.Interfaces
         public void xoaThuongHieu(string maThuongHieu);
 
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu);
-        IEnumerable<ThuongHieuDTO> getAll();
+        
+        IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,out int count);
 
     }
 }

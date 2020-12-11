@@ -10,7 +10,7 @@ namespace Domain.Interfaces
     public interface IThuongHieuRepository
     {
         //Viết hàm chức năng ở đây, xem mẫu ở ISanPhamRepository.cs
-        IEnumerable<ThuongHieu> getAll();
+        IEnumerable<ThuongHieu> getAll(int pageIndex, int pageSize, out int count);
         public void ThemThuongHieu(ThuongHieu thuongHieu);
         public void SuaThuongHieu(ThuongHieu thuongHieu);
         public void XoaThuongHieu(string maThuongHieu);

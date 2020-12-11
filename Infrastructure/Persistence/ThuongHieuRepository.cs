@@ -16,30 +16,35 @@ namespace Infrastructure.Persistence
             this._conText = conText;
         }
 
-        public IEnumerable<ThuongHieu> getAll()
+        public IEnumerable<ThuongHieu> getAll(int pageIndex, int pageSize,out int count)
         {
-            var list = _conText.thuongHieu.ToList();
-            return list;
+            //Gán giá trị cho biến count để truyền giá trị về
+            count=_conText.thuongHieu.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
+
+            var query = _conText.thuongHieu.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
+            return query.Skip((pageIndex - 1) * pageSize)
+                        .Take(pageSize).ToList();//Skip là bỏ qua n phần tử đầu , take là chỉ lấy m phần tử 
         }
 
         public ThuongHieu GetThuongHieu(string maThuongHieu)
         {
+
             return _conText.thuongHieu.Find(maThuongHieu); //tìm đối tượng dựa trên mã xong trả về đối tượng tương ứng
         }
 
-        public void SuaThuongHieu(ThuongHieu thuongHieu)
+        public void SuaThuongHieu(ThuongHieu thuongHieu)//hàm sửa vào database
         {
             _conText.thuongHieu.Update(thuongHieu);
             _conText.SaveChanges();
         }
 
-        public void ThemThuongHieu(ThuongHieu thuongHieu)
+        public void ThemThuongHieu(ThuongHieu thuongHieu)//hàm thêm vào database
         {
             _conText.thuongHieu.Add(thuongHieu);
             _conText.SaveChanges();
         }
 
-        public void XoaThuongHieu(string maThuongHieu)
+        public void XoaThuongHieu(string maThuongHieu)//xóa một đối tượng ở database
         {
             
             var thuongHieuDaTimThay = _conText.thuongHieu.Find(maThuongHieu);
