@@ -9,6 +9,14 @@ namespace Application.Interfaces
 {
     public interface ILoaiDayServices
     {
-        
+        public void themLoaiDay(LoaiDayDTO loaiDay);
+
+        public void suaLoaiDay(LoaiDayDTO loaiDay);
+
+        public void xoaLoaiDay(string maLoaiDay);
+
+        public LoaiDayDTO GetLoaiDay(string maLoaiDay);
+
+        IEnumerable<LoaiDayDTO> getAll(int pageIndex, int pageSize, out int count);
     }
 }

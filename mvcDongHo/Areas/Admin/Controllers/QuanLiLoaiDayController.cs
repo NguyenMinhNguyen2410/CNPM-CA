@@ -1,31 +1,81 @@
-﻿using Application.DTOs;
+﻿using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using mvcDongHo.Areas.Admin.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.DTOs;
 
 namespace mvcDongHo.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin")] //để nó hiểu được những class trong Admin
     public class QuanLiLoaiDayController : Controller
     {
-        public IActionResult Index()
+        private readonly ILoaiDayServices _loaiDayServices;//khai báo services
+
+        public QuanLiLoaiDayController(ILoaiDayServices loaiDayServices) //contructor
         {
-            return View();
+            _loaiDayServices = loaiDayServices;
+        }
+        public IActionResult Index(int pageIndex = 1)//pageIndex được mặc định là 1 nếu không có truyền vào
+        {
+            int count;//Tổng số lượng loại dây
+            int pageSize = 3;//Số lượng loại dây trong 1 trang
+            var list = _loaiDayServices.getAll(pageIndex, pageSize, out count);//Hàm này lấy loại dây lên theo số trang , số lượng loại dây 1 trang , gắn lại tổng sản phẩm vào biến count
+            var indexVM = new LoaiDayView()
+            {
+                LoaiDay = new PaginatedList<LoaiDayDTO>(list, count, pageIndex, pageSize)
+            };
+            //Trả về view + biến indexVM đang giữ list loại dây
+            return View(indexVM);
         }
 
         public IActionResult ThemLoaiDay()
         {
             return View();
         }
-        public IActionResult SuaLoaiDay()
+        public IActionResult ThemLoaiDayData(LoaiDayView loaiDayView)//thêm đối tượng xuống database
         {
+            ViewBag.Error = "1";
+            if (ModelState.IsValid)
+            {
+                _loaiDayServices.themLoaiDay(loaiDayView.loaiDayDTO);
+                ViewBag.Success = "Đã thêm thành công";
+                return Redirect(nameof(ThemLoaiDay));
+            }
+            ViewBag.Error = "0";
+            return View(nameof(ThemLoaiDay));
+        }
+
+        public IActionResult SuaLoaiDayData(LoaiDayView loaiDayView)//Cập nhật một đối tượng xuống database
+        {
+            ViewBag.Error = "Cập nhật thành công";
+            if (ModelState.IsValid)//kiểm tra xem đã có dữ liệu truyền trên url hay chưa
+            {
+                _loaiDayServices.suaLoaiDay(loaiDayView.loaiDayDTO);//gọi hàm sửa ở services
+                Index();//cập nhật xong load lại trang index
+                return View(nameof(Index));//quay về trang index
+            }
+            ViewBag.Error = "Cập nhật thất bại";
             return View();
         }
-        public IActionResult SuaLoaiDayData(LoaiDayDTO loaiDayDTO)
+
+        public IActionResult SuaLoaiDay(string id)//truyền mã vào để sửa, mục đích là để khi bấm nút sửa dựa vào mã ở
+                                                     //giao diện QuanLiLoaiDay/Index truy xuất xuống services/reponsitory để lấy đối tượng loại dây lên và gán dữ liệu cho trang SuaLoaiDay
+
         {
-            return View(nameof(Index));
+            ViewBag.SuaLoaiDay = _loaiDayServices.GetLoaiDay(id);//gọi hàm lấy một đối tượng loại dây bên services và gán cho viewbag
+            return View();
+        }
+
+
+        public IActionResult XoaLoaiDayData(string id) //truyền mã vào để xóa một đối tượng
+        {
+            _loaiDayServices.xoaLoaiDay(id);//gọi hàm xóa bên services
+            Index();//chạy lại hàm index và các dòng trong index, mục đích là để xóa xong nó load lại trang luôn
+            return View(nameof(Index)); // trả về view
+
         }
     }
 }

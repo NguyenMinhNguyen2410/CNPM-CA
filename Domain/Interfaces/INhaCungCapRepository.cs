@@ -9,7 +9,13 @@ namespace Domain.Interfaces
 {
     public interface INhaCungCapRepository
     {
-        
+
         //Viết hàm chức năng ở đây, xem mẫu ở ISanPhamRepository.cs
+        IEnumerable<NhaCungCap> getAll(int pageIndex, int pageSize, out int count);
+        public void ThemNhaCungCap(NhaCungCap nhaCungCap);
+        public void SuaNhaCungCap(NhaCungCap nhaCungCap);
+        public void XoaNhaCungCap(string maNhaCungCap);
+
+        public NhaCungCap GetNhaCungCap(string maNhaCungCap);
     }
 }
