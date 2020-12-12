@@ -18,11 +18,15 @@ namespace Application.Services
         {
             _loaiDayRepository = loaiDayRepository;
         }
-        public IEnumerable<LoaiDayDTO> getAll(int pageIndex, int pageSize, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
-        {
-            return _loaiDayRepository.getAll(pageIndex, pageSize, out count).MappingLoaiDayDTO1();
-        }
 
+        public IEnumerable<LoaiDayDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+            return _loaiDayRepository.getAll(pageIndex, pageSize, search, Type, out count).MappingLoaiDayList();
+        }
+        public IEnumerable<LoaiDayDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+            return _loaiDayRepository.getAll().MappingLoaiDayList();
+        }
         public LoaiDayDTO GetLoaiDay(string maLoaiDay)
         {
             return _loaiDayRepository.GetLoaiDay(maLoaiDay).MappingLoaiDayDTO();

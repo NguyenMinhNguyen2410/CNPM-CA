@@ -13,9 +13,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form action="simple-results.html">
+                <form asp-controller="QuanLiLoaiDay" asp-action="Index">
                     <div class="input-group">
-                        <input type="search" class="form-control form-control-lg" placeholder="Tìm kiếm">
+                        <select asp-for="Type">
+                            <option value="IDDay">Mã loại dây</option>
+                            <option value="TenLoaiDay">Tên loại dây</option>
+                        </select>
+                        <input type="search" class="form-control form-control-lg" placeholder="Tìm kiếm" asp-for="searchString">
                         <div class="input-group-append">
                             <button type="submit" class="btn btn-lg btn-default">
                                 <i class="fa fa-search"></i>
@@ -72,11 +76,9 @@
     var nextDisabled = !Model.LoaiDay.HasNextPage ? "disabled" : "";
 }
 @* Tạo nút quay về, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
-<a class="btn btn-default @prevDisabled"
-   asp-route-pageIndex="@(Model.LoaiDay.PageIndex -1)">Previous</a>
+<a class="btn btn-default @prevDisabled" asp-route-pageIndex="@(Model.LoaiDay.PageIndex -1)" asp-route-searchString="@Model.LoaiDay.searchString">Previous</a>
 @* Tạo nút tiến lên, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
-<a class="btn btn-default @nextDisabled"
-   asp-route-pageIndex="@(Model.LoaiDay.PageIndex +1)">Next</a>
+<a class="btn btn-default @nextDisabled" asp-route-pageIndex="@(Model.LoaiDay.PageIndex +1)" asp-route-searchString="@Model.LoaiDay.searchString">Next</a>
 
 <!--Thẻ show lên xác nhận xóa hay không-->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -101,7 +103,7 @@
 <!--end table-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--thêm cái link để xài jquery cái này anh An chỉ tui-->
 <script type="text/javascript">
-//viết jquery, do xài cái model để xác nhận có muốn xóa hay không thì mình không lấy mã trực tiếp như cái sửa được nên phải viết thêm cái này
+    //viết jquery, do xài cái model để xác nhận có muốn xóa hay không thì mình không lấy mã trực tiếp như cái sửa được nên phải viết thêm cái này
     $("button#xoaloaiday").click(function ()//tạo sự kiên click cho cái button ở trên theo cú pháp của jquery: "tenthe#mã thẻ"
     {
         var id = $(this).data("id");//gán IDLoaiDay đã được lưu vào data-id ở trên để gán vào biến id

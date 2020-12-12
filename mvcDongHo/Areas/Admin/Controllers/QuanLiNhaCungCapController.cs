@@ -18,27 +18,31 @@ namespace mvcDongHo.Areas.Admin.Controllers
         {
             _nhaCungCapServices = nhaCungCapServices;
         }
-        public IActionResult Index(int pageIndex = 1)//pageIndex được mặc định là 1 nếu không có truyền vào
+        public IActionResult Index(int pageIndex = 1,string searchString="",string Type="" )//pageIndex được mặc định là 1 nếu không có truyền vào
+        //pageIndex là trang hiện hành
+        //searchString là chuỗi tìm kiếm
+        //Type là loại mà chuỗi tìm kiếm muốn nhắm đến , ví dụ ID, Name,...
         {
-            int count;//Tổng số lượng nhà cung cấp
-            int pageSize = 3;//Số lượng nhà cung cấp trong 1 trang
-            var list = _nhaCungCapServices.getAll(pageIndex, pageSize, out count);//Hàm này lấy nhà cung cấp lên theo số trang , số lượng nhà cung cấp 1 trang , gắn lại tổng sản phẩm vào bién count
+            int count;//Tổng số lượng nhà cung cấp
+            int pageSize = 3;//Số lượng nhà cung cấp trong 1 trang
+            var list = _nhaCungCapServices.getAll(pageIndex,pageSize,searchString,Type,out count);//Hàm này lấy nhà cung cấp lên theo số trang , số lượng nhà cung cấp 1 trang , gắn lại tổng sản phẩm vào bién count
             var indexVM = new NhaCungCapView()
             {
-                NhaCungCap = new PaginatedList<NhaCungCapDTO>(list, count, pageIndex, pageSize)
+                NhaCungCap = new PaginatedList<NhaCungCapDTO>(list,count, pageIndex, pageSize,searchString),
             };
-            //Trả về view + biến indexVM đang giữ list nhà cung cấp
+            
+            //Trả về view + biến indexVM đang giữ list nhà cung cấp
             return View(indexVM);
         }
 
         public IActionResult ThemNhaCungCap()
-        {
+        { 
             return View();
         }
         public IActionResult ThemNhaCungCapData(NhaCungCapView nhaCungCapView)//thêm đối tượng xuống database
         {
             ViewBag.Error = "1";
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 _nhaCungCapServices.themNhaCungCap(nhaCungCapView.nhaCungCapDTO);
                 ViewBag.Success = "Đã thêm thành công";
@@ -61,10 +65,10 @@ namespace mvcDongHo.Areas.Admin.Controllers
         }
 
         public IActionResult SuaNhaCungCap(string id)//truyền mã vào để sửa, mục đích là để khi bấm nút sửa dựa vào mã ở
-                                                     //giao diện QuanLiNhaCungCap/Index truy xuất xuống services/reponsitory để lấy đối tượng nhà cung cấp lên và gán dữ liệu cho trang SuaNhaCungCap
+            //giao diện QuanLiNhaCungCap/Index truy xuất xuống services/reponsitory để lấy đối tượng nhà cung cấp lên và gán dữ liệu cho trang SuaNhaCungCap
 
         {
-            ViewBag.SuaNhaCungCap = _nhaCungCapServices.GetNhaCungCap(id);//gọi hàm lấy một đối tượng nhà cung cấp bên services và gán cho viewbag
+            ViewBag.SuaNhaCungCap = _nhaCungCapServices.GetNhaCungCap(id);//gọi hàm lấy một đối tượng nhà cung cấp bên services và gán cho viewbag
             return View();
         }
 
@@ -72,7 +76,7 @@ namespace mvcDongHo.Areas.Admin.Controllers
         public IActionResult XoaNhaCungCapData(string id) //truyền mã vào để xóa một đối tượng
         {
             _nhaCungCapServices.xoaNhaCungCap(id);//gọi hàm xóa bên services
-            return RedirectToAction("Index");//quay về trang index
+            return RedirectToAction("Index"); // trả về view
 
         }
     }

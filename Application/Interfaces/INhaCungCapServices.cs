@@ -17,6 +17,8 @@ namespace Application.Interfaces
 
         public NhaCungCapDTO GetNhaCungCap(string maNhaCungCap);
 
-        IEnumerable<NhaCungCapDTO> getAll(int pageIndex, int pageSize, out int count);
+        IEnumerable<NhaCungCapDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count);
+
+        IEnumerable<NhaCungCapDTO> getAll();
     }
 }
