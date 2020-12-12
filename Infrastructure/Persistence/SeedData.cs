@@ -275,7 +275,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5810000"),
-                        HinhAnh = "Orient_FAG02004B0.jpg"
+                        HinhAnh = "/images/DATA/Orient_FAG02004B0.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -287,7 +287,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6170000"),
-                        HinhAnh = "Orient_FAL00003W0.jpg"
+                        HinhAnh = "/images/DATA/Orient_FAL00003W0.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -299,7 +299,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("9080000"),
-                        HinhAnh = "Orient_FET0P002B0.jpg"
+                        HinhAnh = "/images/DATA/Orient_FET0P002B0.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -311,7 +311,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3810000"),
-                        HinhAnh = "Orient_FGW01004A0.jpg"
+                        HinhAnh = "/images/DATA/Orient_FGW01004A0.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -323,7 +323,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("7080000"),
-                        HinhAnh = "Orient_RA-AC0011S10B.jpg"
+                        HinhAnh = "/images/DATA/Orient_RA-AC0011S10B.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -335,7 +335,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2550000"),
-                        HinhAnh = "Fouette_OR-FAIRYIII.jpg"
+                        HinhAnh = "/images/DATA/Fouette_OR-FAIRYIII.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -347,7 +347,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("1550000"),
-                        HinhAnh = "Fouette_OR-5.jpg"
+                        HinhAnh = "/images/DATA/Fouette_OR-5.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -359,7 +359,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("1550000"),
-                        HinhAnh = "Fouette_OR-STAR.jpg"
+                        HinhAnh = "/images/DATA/Fouette_OR-STAR.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -371,7 +371,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("1550000"),
-                        HinhAnh = "Fouette_OR-LOVE.jpg"
+                        HinhAnh = "/images/DATA/Fouette_OR-LOVE.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -383,7 +383,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4489000"),
-                        HinhAnh = "Casio_EFV-540DC-1BVUDF.jpg"
+                        HinhAnh = "/images/DATA/Casio_EFV-540DC-1BVUDF.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -395,7 +395,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("1457000"),
-                        HinhAnh = "Casio_MTP-VD300L-1EUDF.jpg"
+                        HinhAnh = "/images/DATA/Casio_MTP-VD300L-1EUDF.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -407,7 +407,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("1387000"),
-                        HinhAnh = "Casio_LTP-1170N-9ARDF.jpg"
+                        HinhAnh = "/images/DATA/Casio_LTP-1170N-9ARDF.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -419,7 +419,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("517000"),
-                        HinhAnh = "Casio_MW-240-7EVDF.jpg"
+                        HinhAnh = "/images/DATA/Casio_MW-240-7EVDF.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -431,7 +431,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("1246000"),
-                        HinhAnh = "Casio_AE1200WHD.jpg"
+                        HinhAnh = "/images/DATA/Casio_AE1200WHD.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -443,7 +443,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3169000"),
-                        HinhAnh = "G-Shock_DW-5600MS-1DR.jpg"
+                        HinhAnh = "/images/DATA/G-Shock_DW-5600MS-1DR.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -455,7 +455,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5100000"),
-                        HinhAnh = "G-Shock_GAX-100MSB-1ADR.jpg"
+                        HinhAnh = "/images/DATA/G-Shock_GAX-100MSB-1ADR.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -467,7 +467,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3737000"),
-                        HinhAnh = "Baby-G_MSG-S200-7ADR.jpg"
+                        HinhAnh = "/images/DATA/Baby-G_MSG-S200-7ADR.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -479,7 +479,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("10364000"),
-                        HinhAnh = "G-Shock_GST-S310D-1A9DR.jpg"
+                        HinhAnh = "/images/DATA/G-Shock_GST-S310D-1A9DR.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -491,7 +491,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5452000"),
-                        HinhAnh = "G-Shock_GA-200RG-1ADR.jpg"
+                        HinhAnh = "/images/DATA/G-Shock_GA-200RG-1ADR.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -503,7 +503,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5520000"),
-                        HinhAnh = "Citizen_NH8350-59L.jpg"
+                        HinhAnh = "/images/DATA/Citizen_NH8350-59L.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -515,7 +515,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4300000"),
-                        HinhAnh = "Citizen_BH3003-51A.jpg"
+                        HinhAnh = "/images/DATA/Citizen_BH3003-51A.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -527,7 +527,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2700000"),
-                        HinhAnh = "Citizen_BI1050-05A.jpg"
+                        HinhAnh = "/images/DATA/Citizen_BI1050-05A.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -539,7 +539,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6600000"),
-                        HinhAnh = "Citizen_BM9012-02A.jpg"
+                        HinhAnh = "/images/DATA/Citizen_BM9012-02A.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -551,7 +551,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("7750000"),
-                        HinhAnh = "Citizen_CA4425-10X.jpg"
+                        HinhAnh = "/images/DATA/Citizen_CA4425-10X.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -563,7 +563,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3480000"),
-                        HinhAnh = "Fossil_ES4821.jpg"
+                        HinhAnh = "/images/DATA/Fossil_ES4821.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -575,7 +575,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4020000"),
-                        HinhAnh = "Fossil_ES4534.jpg"
+                        HinhAnh = "/images/DATA/Fossil_ES4534.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -587,7 +587,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3480000"),
-                        HinhAnh = "Fossil_ES4837.jpg"
+                        HinhAnh = "/images/DATA/Fossil_ES4837.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -599,7 +599,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3380000"),
-                        HinhAnh = "Fossil_ES4433.jpg"
+                        HinhAnh = "/images/DATA/Fossil_ES4433.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -611,7 +611,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3480000"),
-                        HinhAnh = "Fossil_ES4671.jpg"
+                        HinhAnh = "/images/DATA/Fossil_ES4671.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -623,7 +623,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2960000"),
-                        HinhAnh = "Skagen_SKW6654.jpg"
+                        HinhAnh = "/images/DATA/Skagen_SKW6654.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -635,7 +635,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4630000"),
-                        HinhAnh = "Skagen_SKW6454.jpg"
+                        HinhAnh = "/images/DATA/Skagen_SKW6454.jpg"
                     }, 
                     new Domain.Entities.SanPham
                     {
@@ -647,7 +647,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2960000"),
-                        HinhAnh = "Skagen_SKW6578.jpg"
+                        HinhAnh = "/images/DATA/Skagen_SKW6578.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -659,7 +659,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3280000"),
-                        HinhAnh = "Skagen_SKW2699.jpg"
+                        HinhAnh = "/images/DATA/Skagen_SKW2699.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -671,7 +671,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4350000"),
-                        HinhAnh = "Skagen_456SSS.jpg"
+                        HinhAnh = "/images/DATA/Skagen_456SSS.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -683,7 +683,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("24840000"),
-                        HinhAnh = "Seiko_SPB121J1.jpg"
+                        HinhAnh = "/images/DATA/Seiko_SPB121J1.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -695,7 +695,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("8720000"),
-                        HinhAnh = "Seiko_SSC715P1.jpg"
+                        HinhAnh = "/images/DATA/Seiko_SSC715P1.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -707,7 +707,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("11820000"),
-                        HinhAnh = "Seiko_SRPC91K1.jpg"
+                        HinhAnh = "/images/DATA/Seiko_SRPC91K1.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -719,7 +719,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("7540000"),
-                        HinhAnh = "Seiko_SSA383K1.jpg"
+                        HinhAnh = "/images/DATA/Seiko_SSA383K1.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -731,7 +731,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("13070000"),
-                        HinhAnh = "Seiko_SSA810J1.jpg"
+                        HinhAnh = "/images/DATA/Seiko_SSA810J1.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -743,7 +743,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2840000"),
-                        HinhAnh = "OP_89322GS-T.jpg"
+                        HinhAnh = "/images/DATA/OP_89322GS-T.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -755,7 +755,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2000000"),
-                        HinhAnh = "OP_130MS-GL-T-06.jpg"
+                        HinhAnh = "/images/DATA/OP_130MS-GL-T-06.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -767,7 +767,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6970000"),
-                        HinhAnh = "OP_9908AGS-D-88.jpg"
+                        HinhAnh = "/images/DATA/OP_9908AGS-D-88.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -779,7 +779,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2800000"),
-                        HinhAnh = "OP_5695MS-T.jpg"
+                        HinhAnh = "/images/DATA/OP_5695MS-T.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -791,7 +791,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("2920000"),
-                        HinhAnh = "OP_5695LSK-V.jpg"
+                        HinhAnh = "/images/DATA/OP_5695LSK-V.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -803,7 +803,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6910000"),
-                        HinhAnh = "MichaelKors_MK3191.jpg"
+                        HinhAnh = "/images/DATA/MichaelKors_MK3191.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -815,7 +815,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6760000"),
-                        HinhAnh = "MichaelKors_MK4409.jpg"
+                        HinhAnh = "/images/DATA/MichaelKors_MK4409.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -827,7 +827,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6910000"),
-                        HinhAnh = "MichaelKors_MK8752.jpg"
+                        HinhAnh = "/images/DATA/MichaelKors_MK8752.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -839,7 +839,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5400000"),
-                        HinhAnh = "MichaelKors_MK8631.jpg"
+                        HinhAnh = "/images/DATA/MichaelKors_MK8631.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -851,7 +851,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5270000"),
-                        HinhAnh = "MichaelKors_MK2715.jpg"
+                        HinhAnh = "/images/DATA/MichaelKors_MK2715.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -863,7 +863,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5300000"),
-                        HinhAnh = "DanielWellington_DW00100014.jpg"
+                        HinhAnh = "/images/DATA/DanielWellington_DW00100014.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -875,7 +875,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("3500000"),
-                        HinhAnh = "DanielWellington_DW00100311.jpg"
+                        HinhAnh = "/images/DATA/DanielWellington_DW00100311.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -887,7 +887,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4100000"),
-                        HinhAnh = "DanielWellington_DW00100164.jpg"
+                        HinhAnh = "/images/DATA/DanielWellington_DW00100164.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -899,7 +899,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4600000"),
-                        HinhAnh = "DanielWellington_DW00100277.jpg"
+                        HinhAnh = "/images/DATA/DanielWellington_DW00100277.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -911,7 +911,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5300000"),
-                        HinhAnh = "DanielWellington_DW00100135.jpg"
+                        HinhAnh = "/images/DATA/DanielWellington_DW00100135.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -923,7 +923,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5710000"),
-                        HinhAnh = "Candino_C45582.jpg"
+                        HinhAnh = "/images/DATA/Candino_C42922.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -935,7 +935,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4650000"),
-                        HinhAnh = "Candino_C42922.jpg"
+                        HinhAnh = "/images/DATA/Candino_C44714.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -947,7 +947,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5710000"),
-                        HinhAnh = "Candino_C44714.jpg"
+                        HinhAnh = "/images/DATA/Candino_C46401.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -959,7 +959,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6750000"),
-                        HinhAnh = "Candino_C46401.jpg"
+                        HinhAnh = "/images/DATA/Candino_C42921.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -971,7 +971,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4650000"),
-                        HinhAnh = "Candino_C42921.jpg"
+                        HinhAnh = "/images/DATA/Saga_53229 SVMWSV-6.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -983,7 +983,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6384000"),
-                        HinhAnh = "Saga_53229 SVMWSV-6.jpg"
+                        HinhAnh = "/images/DATA/Saga_80727 GPMWGP-2L.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -995,7 +995,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6004000"),
-                        HinhAnh = "Saga_80727 GPMWGP-2L.jpg"
+                        HinhAnh = "/images/DATA/Saga_53555 SVMWSV-2.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1007,7 +1007,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5244000"),
-                        HinhAnh = "Saga_53555 SVMWSV-2.jpg"
+                        HinhAnh = "/images/DATA/Saga_71865 GPMWGP-2L.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1019,7 +1019,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6764000"),
-                        HinhAnh = "Saga_71865 GPMWGP-2L.jpg"
+                        HinhAnh = "/images/DATA/Saga_71865 GPMWGP-2L.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1031,7 +1031,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6384000"),
-                        HinhAnh = "Saga_53624 RGBDBK-2.jpg"
+                        HinhAnh = "/images/DATA/Saga_53624 RGBDBK-2.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1043,7 +1043,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("6210000"),
-                        HinhAnh = "Adriatica_A3694.51B3QZ.jpg"
+                        HinhAnh = "/images/DATA/Adriatica_A3694.51B3QZ.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1055,7 +1055,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("4440000"),
-                        HinhAnh = "Adriatica_A8109.5153Q.jpg"
+                        HinhAnh = "/images/DATA/Adriatica_A8109.5153Q.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1067,7 +1067,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5490000"),
-                        HinhAnh = "Adriatica_A3603.5113QZ.jpg"
+                        HinhAnh = "/images/DATA/Adriatica_A3603.5113QZ.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
