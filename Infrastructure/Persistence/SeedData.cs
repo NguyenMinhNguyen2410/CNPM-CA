@@ -1079,7 +1079,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5310000"),
-                        HinhAnh = "Adriatica_A3508.1143QZ.jpg"
+                        HinhAnh = "/images/DATA/Adriatica_A3508.1143QZ.jpg"
                     },
                     new Domain.Entities.SanPham
                     {
@@ -1091,7 +1091,7 @@ namespace Infrastructure.Persistence
                         BaoHanh = "2 năm",
                         SoLuong = 10,
                         Gia = float.Parse("5610000"),
-                        HinhAnh = "Adriatica_A3143.2111Q.jpg"
+                        HinhAnh = "/images/DATA/Adriatica_A3143.2111Q.jpg"
                     }
 
                     );

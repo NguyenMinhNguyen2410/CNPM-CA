@@ -11,5 +11,6 @@ namespace mvcDongHo.ViewModels
         public SanPhamDTO sanPhamDTO { get; set; }
         //Hàm để tạo thành list kiểu ThuongHieuDTO
         public PaginatedList<SanPhamDTO> SanPham { get; set; }
+        public string textSearch { get; set; }
     }
 }

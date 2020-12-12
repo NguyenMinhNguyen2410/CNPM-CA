@@ -13,6 +13,7 @@ namespace mvcDongHo.Controllers
     public class HomeController : Controller
     {
         private readonly ISanPhamServices _sanPhamServices;//khai báo services
+        int pageSize = 9;//Số lượng thương hiệu trong 1 trang
         public HomeController(ISanPhamServices sanPhamServices) //contructor
         {
             _sanPhamServices = sanPhamServices;
@@ -41,14 +42,15 @@ namespace mvcDongHo.Controllers
             return View();
         }
    
-        public ActionResult Shop(int pageIndex = 1)
+        public ActionResult Shop(int pageIndex = 1,string textSearch="")
         {
             int count;//Tổng số lượng thương hiệu
-            int pageSize = 9;//Số lượng thương hiệu trong 1 trang
-            var list = _sanPhamServices.getAll(pageIndex, pageSize, out count);//Hàm này lấy thương hiệu lên theo số trang , số lượng thương hiệu 1 trang , gắn lại tổng sản phẩm vào bién count
+           
+            var list = _sanPhamServices.getAll(pageIndex, pageSize,textSearch, out count);//Hàm này lấy thương hiệu lên theo số trang , số lượng thương hiệu 1 trang , gắn lại tổng sản phẩm vào bién count
             var indexVM = new SanPhamView
             {
-                SanPham = new PaginatedList<SanPhamDTO>(list, count, pageIndex, pageSize)
+                SanPham = new PaginatedList<SanPhamDTO>(list, count, pageIndex, pageSize),
+                textSearch=textSearch
             };
             //Trả về view + biến indexVM đang giữ list thương hiệu
             return View(indexVM);
@@ -63,5 +65,11 @@ namespace mvcDongHo.Controllers
         {
             return View();
         }
+        // [HttpGet]
+        // public JsonResult Search(string textSearch){
+        //     var list=_sanPhamServices.getAll();
+        //     var content = list.Where(i=>i.TenSanPham.Contains(textSearch)).ToList();
+        //     return Json(content);
+        // }
     }
 }

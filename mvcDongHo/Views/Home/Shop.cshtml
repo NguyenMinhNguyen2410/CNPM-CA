@@ -57,27 +57,27 @@
                                     {
                                         foreach (var p in Model.SanPham)
                                         {
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <div class="type-lb">
-                                        <p class="sale">Mới</p>
-                                    </div>
-                                    <img src="@p.HinhAnh" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a data-toggle="tooltip" data-placement="right" title="View" asp-controller="Home" asp-action="Shopdetail" asp-route-id="@p.IDSanPham"><i class="fas fa-eye"></i></a></li>
-
-                                        </ul>
-                                        <a class="cart" href="#">Thêm vào giỏ hàng</a>
-                                    </div>
-                                </div>
-                                <div class="why-text">
-                                    <h4>@p.TenSanPham</h4>
-                                    <h5>@p.Gia</h5>
-                                </div>
-                            </div>
-                        </div>}
+                                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="products-single fix" id="content">
+                                                <div class="box-img-hover">
+                                                    <div class="type-lb">
+                                                        <p class="sale">Mới</p>
+                                                    </div>
+                                                    <img src="@p.HinhAnh" class="img-fluid" alt="Image">
+                                                    <div class="mask-icon">
+                                                        <ul>
+                                                            <li><a data-toggle="tooltip" data-placement="right" title="View" asp-controller="Home" asp-action="Shopdetail" asp-route-id="@p.IDSanPham"><i class="fas fa-eye"></i></a></li>
+                                                        </ul>
+                                                        <a class="cart" href="#">Thêm vào giỏ hàng</a>
+                                                    </div>
+                                                </div>
+                                                <div class="why-text">
+                                                    <h4>@p.TenSanPham</h4>
+                                                    <h5>@p.Gia</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        }
                                     }
 
 
@@ -86,10 +86,10 @@
                             @{ @* setup nút quay về , trỏ vào hàm HasPreviousPage ở PaginatedList để kiểm tra *@ var prevDisabled = !Model.SanPham.HasPreviousPage ? "disabled" : ""; @* setup nút tiến tới , trỏ vào hàm HasNextPage ở PaginatedList để kiểm tra *@ var nextDisabled = !Model.SanPham.HasNextPage ? "disabled" : ""; }
                             @* Tạo nút quay về, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
                             <a style="position:absolute" class="btn btn-dark @prevDisabled"
-                               asp-route-pageIndex="@(Model.SanPham.PageIndex -1)">Previous</a>
+                               asp-route-pageIndex="@(Model.SanPham.PageIndex -1)" asp-route-textSearch="@Model.textSearch">Previous</a>
                             @* Tạo nút tiến lên, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
                             <a style="position:absolute; right:0px" class="btn btn-dark @nextDisabled"
-                               asp-route-pageIndex="@(Model.SanPham.PageIndex +1)">Next</a>
+                               asp-route-pageIndex="@(Model.SanPham.PageIndex +1)" asp-route-textSearch="@Model.textSearch">Next</a>
 
                             <div role="tabpanel" class="tab-pane fade" id="list-view">
                                 <div class="list-view-box">
@@ -198,61 +198,61 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
-                <div class="product-categori">
-                    <div class="search-product">
-                        <form action="#">
-                            <input class="form-control" placeholder="Tìm kiếm..." type="text">
+                <form method="GET">
+                    <div class="product-categori">
+                        <div class="search-product">
+                            <input class="form-control" placeholder="Tìm kiếm..." type="text" id="search" asp-for="textSearch">
                             <button type="submit"> <i class="fa fa-search"></i> </button>
-                        </form>
-                    </div>
-                    <div class="filter-sidebar-left">
-                        <div class="title-left">
-                            <h3>Lọc</h3>
                         </div>
-                        <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
-                            <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">
-                                    Fruits & Drinks <small class="text-muted">(100)</small>
-                                </a>
-                                <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action active">Fruits 1 <small class="text-muted">(50)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Fruits 2 <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Fruits 3 <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Fruits 4 <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Fruits 5 <small class="text-muted">(20)</small></a>
+                        <div class="filter-sidebar-left">
+                            <div class="title-left">
+                                <h3>Lọc</h3>
+                            </div>
+                            <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
+                                <div class="list-group-collapse sub-men">
+                                    <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">
+                                        Fruits & Drinks <small class="text-muted">(100)</small>
+                                    </a>
+                                    <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">Fruits 1 <small class="text-muted">(50)</small></a>
+                                            <a href="#" class="list-group-item list-group-item-action">Fruits 2 <small class="text-muted">(10)</small></a>
+                                            <a href="#" class="list-group-item list-group-item-action">Fruits 3 <small class="text-muted">(10)</small></a>
+                                            <a href="#" class="list-group-item list-group-item-action">Fruits 4 <small class="text-muted">(10)</small></a>
+                                            <a href="#" class="list-group-item list-group-item-action">Fruits 5 <small class="text-muted">(20)</small></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">
-                                    Vegetables
-                                    <small class="text-muted">(50)</small>
-                                </a>
-                                <div class="collapse" id="sub-men2" data-parent="#list-group-men">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">Vegetables 1 <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Vegetables 2 <small class="text-muted">(20)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Vegetables 3 <small class="text-muted">(20)</small></a>
+                                <div class="list-group-collapse sub-men">
+                                    <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">
+                                        Vegetables
+                                        <small class="text-muted">(50)</small>
+                                    </a>
+                                    <div class="collapse" id="sub-men2" data-parent="#list-group-men">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action">Vegetables 1 <small class="text-muted">(10)</small></a>
+                                            <a href="#" class="list-group-item list-group-item-action">Vegetables 2 <small class="text-muted">(20)</small></a>
+                                            <a href="#" class="list-group-item list-group-item-action">Vegetables 3 <small class="text-muted">(20)</small></a>
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="#" class="list-group-item list-group-item-action"> Grocery  <small class="text-muted">(150) </small></a>
+                                <a href="#" class="list-group-item list-group-item-action"> Grocery <small class="text-muted">(11)</small></a>
+                                <a href="#" class="list-group-item list-group-item-action"> Grocery <small class="text-muted">(22)</small></a>
                             </div>
-                            <a href="#" class="list-group-item list-group-item-action"> Grocery  <small class="text-muted">(150) </small></a>
-                            <a href="#" class="list-group-item list-group-item-action"> Grocery <small class="text-muted">(11)</small></a>
-                            <a href="#" class="list-group-item list-group-item-action"> Grocery <small class="text-muted">(22)</small></a>
                         </div>
-                    </div>
-                    <div class="filter-price-left">
+                        <div class="filter-price-left">
 
-                        <div class="price-box-slider">
-                            <div id="slider-range"></div>
-                            <p>
-                                <input type="text" id="amount" readonly style="border:0; color:#fbb714; font-weight:bold;">
-                                <button class="btn hvr-hover" type="submit">Filter</button>
-                            </p>
+                            <div class="price-box-slider">
+                                <div id="slider-range"></div>
+                                <p>
+                                    <input type="text" id="amount" readonly style="border:0; color:#fbb714; font-weight:bold;">
+                                    <button class="btn hvr-hover" type="submit">Filter</button>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -21,13 +21,22 @@ namespace Infrastructure.Persistence
             _conText.SaveChanges();//lưu lại thay đổi
         }
 
-        public IEnumerable<SanPham> getAll(int pageIndex, int pageSize, out int count)
+        public IEnumerable<SanPham> getAll(int pageIndex, int pageSize,string textSearch, out int count)
         {
-            count = _conText.sanPham.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
-
+            
             var query = _conText.sanPham.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
+            if(!string.IsNullOrEmpty(textSearch))
+            {        
+                query=query.Where(m => m.TenSanPham.Contains(textSearch));
+            }
+            count = query.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
+
             return query.Skip((pageIndex - 1) * pageSize)
                         .Take(pageSize).ToList();
+        }
+        public IEnumerable<SanPham> getAll()
+        {
+            return _conText.sanPham.ToList();
         }
         public IEnumerable<SanPham> get4sp(int boqua)
         {
