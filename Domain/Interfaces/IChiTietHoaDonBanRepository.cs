@@ -9,7 +9,8 @@ namespace Domain.Interfaces
 {
     public interface IChiTietHoaDonBanRepository
     {
-        
         //Viết hàm chức năng ở đây, xem mẫu ở ISanPhamRepository.cs
+        IEnumerable<ChiTietHoaDonBan> getAll();
+        
     }
 }

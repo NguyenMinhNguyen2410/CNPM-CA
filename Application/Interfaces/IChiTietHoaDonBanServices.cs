@@ -9,6 +9,6 @@ namespace Application.Interfaces
 {
     public interface IChiTietHoaDonBanServices
     {
-        
+        IEnumerable<ChiTietHoaDonBanDTO> getAll();
     }
 }

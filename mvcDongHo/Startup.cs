@@ -44,13 +44,26 @@ namespace mvcDongHo
             //QuanLiSanPham
             services.AddScoped<ISanPhamRepository, SanPhamRepository>();
             services.AddScoped<ISanPhamServices, SanPhamServices>();
-            //ThuongHieu
+            //QuanLiThuongHieu
             services.AddScoped<IThuongHieuRepository, ThuongHieuRepository>();
             services.AddScoped<IThuongHieuServices, ThuongHieuServices>();
-            //LoaiDay
+            //QuanLiHoaDonBan
+            services.AddScoped<IHoaDonBanRepository, HoaDonBanRepository>();
+            services.AddScoped<IHoaDonBanServices, HoaDonBanServices>();
+            services.AddScoped<IChiTietHoaDonBanRepository, ChiTietHoaDonBanRepository>();
+            services.AddScoped<IChiTietHoaDonBanServices, ChiTietHoaDonBanServices>();
+            //QuanLiHoaDonNhap
+            services.AddScoped<IHoaDonNhapRepository, HoaDonNhapRepository>();
+            services.AddScoped<IHoaDonNhapServices, HoaDonNhapServices>();
+            services.AddScoped<IChiTietHoaDonNhapRepository, ChiTietHoaDonNhapRepository>();
+            services.AddScoped<IChiTietHoaDonNhapServices, ChiTietHoaDonNhapServices>();
+            //QuanLiKhachHang
+            services.AddScoped<IKhachHangRepository, KhachHangRepository>();
+            services.AddScoped<IKhachHangServices, KhachHangServices>();
+            //QuanLiLoaiDay
             services.AddScoped<ILoaiDayRepository, LoaiDayRepository>();
             services.AddScoped<ILoaiDayServices, LoaiDayServices>();
-            //NhaCungCap
+            //QuanLiNhaCungCap
             services.AddScoped<INhaCungCapRepository, NhaCungCapRepository>();
             services.AddScoped<INhaCungCapServices, NhaCungCapServices>();
         }
