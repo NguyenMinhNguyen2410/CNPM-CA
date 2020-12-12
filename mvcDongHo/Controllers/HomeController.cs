@@ -13,10 +13,12 @@ namespace mvcDongHo.Controllers
     public class HomeController : Controller
     {
         private readonly ISanPhamServices _sanPhamServices;//khai báo services
-        int pageSize = 9;//Số lượng thương hiệu trong 1 trang
-        public HomeController(ISanPhamServices sanPhamServices) //contructor
+        private readonly IThuongHieuServices _thuongHieuServices;//khai báo services
+        private int pageSize = 9;//Số lượng thương hiệu trong 1 trang
+        public HomeController(ISanPhamServices sanPhamServices,IThuongHieuServices thuongHieuServices) //contructor
         {
             _sanPhamServices = sanPhamServices;
+            _thuongHieuServices=thuongHieuServices;
         }
         
         public ActionResult Index()
@@ -42,15 +44,18 @@ namespace mvcDongHo.Controllers
             return View();
         }
    
-        public ActionResult Shop(int pageIndex = 1,string textSearch="")
+        public ActionResult Shop(int pageIndex = 1,string textSearch="",string type="",bool price=true)
         {
             int count;//Tổng số lượng thương hiệu
            
-            var list = _sanPhamServices.getAll(pageIndex, pageSize,textSearch, out count);//Hàm này lấy thương hiệu lên theo số trang , số lượng thương hiệu 1 trang , gắn lại tổng sản phẩm vào bién count
+            var list = _sanPhamServices.getAll(pageIndex, pageSize,textSearch,type,price, out count);//Hàm này lấy thương hiệu lên theo số trang , số lượng thương hiệu 1 trang , gắn lại tổng sản phẩm vào bién count
             var indexVM = new SanPhamView
             {
                 SanPham = new PaginatedList<SanPhamDTO>(list, count, pageIndex, pageSize),
-                textSearch=textSearch
+                textSearch=textSearch,
+                type=type,
+                price=price,
+                ThuongHieu= _thuongHieuServices.getAll()
             };
             //Trả về view + biến indexVM đang giữ list thương hiệu
             return View(indexVM);
