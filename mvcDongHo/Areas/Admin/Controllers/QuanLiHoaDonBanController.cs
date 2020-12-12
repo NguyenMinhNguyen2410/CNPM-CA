@@ -30,7 +30,6 @@ namespace mvcDongHo.Areas.Admin.Controllers
             {
                 HoaDonBan = new PaginatedList<HoaDonBanDTO>(list,count, pageIndex, pageSize,searchString),
             };
-            ViewBag.chitiet=_chiTietHoaDonBanServices.getAll();
             //Trả về view + biến indexVM đang giữ list thương hiệu
             return View(indexVM);
         }

@@ -31,5 +31,15 @@ namespace Application.Mappings
                 NgayNhap=hoaDonNhapDTO.NgayNhap
             };
         }
+        public static IEnumerable<HoaDonNhapDTO> MappingHoaDonNhapList(this IEnumerable<HoaDonNhap> HoaDonNhapS)
+        {
+            List<HoaDonNhapDTO> listreturn = new List<HoaDonNhapDTO>(); 
+            foreach (var HoaDonNhap in HoaDonNhapS)
+            {
+                var obnow = HoaDonNhap.MappingHoaDonNhapDTO();
+                listreturn.Add(obnow);
+            }
+            return listreturn;
+        }
     }
 }

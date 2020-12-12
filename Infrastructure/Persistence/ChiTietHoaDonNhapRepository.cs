@@ -15,7 +15,10 @@ namespace Infrastructure.Persistence
         {
             this._conText = conText;
         }
-       
         //Viết chức năng ở đây, xem mẫu ở SanPhamRepository.cs
+        public IEnumerable<ChiTietHoaDonNhap> getAll()
+        {
+            return _conText.chiTietHoaDonNhap.ToList();
+        }
     }
 }

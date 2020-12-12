@@ -11,6 +11,5 @@ namespace Domain.Interfaces
     {
         //Viết hàm chức năng ở đây, xem mẫu ở ISanPhamRepository.cs
         IEnumerable<ChiTietHoaDonBan> getAll();
-        
     }
 }

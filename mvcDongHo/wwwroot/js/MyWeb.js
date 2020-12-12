@@ -8,7 +8,7 @@ $("button#xoathuonghieu").click(function ()
         + '<button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>';//tạo biến obj để lưu lại cái html mình cần xuất ra, cái này tui không quá rõ nhưng mà cứ làm theo thôi, hok khó
     $("div#footer-del").html(obj);//gọi cái thẻ div có mã là footer-del để chèn phần html zo
 });
-$('button#xemchitiet').click(function ()
+$('button#xemchitietban').click(function ()
 {
     var id = $(this).data("id");
     console.log(id);
@@ -18,6 +18,29 @@ $('button#xemchitiet').click(function ()
         data:{IDHoaDon:id},
         success:function(response){
             console.log(response)
+            $('tbody#content').empty();
+            response.forEach(function(item) {
+                var obj='<tr>'
+                    +'<td>'+item.idSanPham+'</td>'
+                    +'<td>'+item.soLuong+'</td>'
+                    +'</tr>';
+                $('tbody#content').append(obj);
+            });
+            
+        }
+    });   
+});
+$('button#xemchitietnhap').click(function ()
+{
+    var id = $(this).data("id");
+    console.log(id);
+    $.ajax({
+        type:"GET",
+        url:"/Admin/QuanLiHoaDonNhap/HoaDonNhap",
+        data:{IDHoaDonNhap:id},
+        success:function(response){
+            console.log(response)
+            $('tbody#content').empty();
             response.forEach(function(item) {
                 var obj='<tr>'
                     +'<td>'+item.idSanPham+'</td>'

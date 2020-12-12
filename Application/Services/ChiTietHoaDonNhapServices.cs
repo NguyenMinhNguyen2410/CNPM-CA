@@ -18,5 +18,9 @@ namespace Application.Services
         {
             _chiTietHoaDonNhapRepository = chiTietHoaDonNhapRepository;
         }
+        public IEnumerable<ChiTietHoaDonNhapDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+           return _chiTietHoaDonNhapRepository.getAll().MappingChiTietHoaDonNhapList();
+        }
     }
 }
