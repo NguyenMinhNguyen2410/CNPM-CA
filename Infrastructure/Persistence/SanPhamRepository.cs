@@ -21,13 +21,25 @@ namespace Infrastructure.Persistence
             _conText.SaveChanges();//lưu lại thay đổi
         }
 
-        public IEnumerable<SanPham> getAll(int pageIndex, int pageSize,string textSearch, out int count)
+        public IEnumerable<SanPham> getAll(int pageIndex, int pageSize,string textSearch,string type,bool price, out int count)
         {
             
             var query = _conText.sanPham.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
             if(!string.IsNullOrEmpty(textSearch))
             {        
                 query=query.Where(m => m.TenSanPham.Contains(textSearch));
+            }
+            if(!string.IsNullOrEmpty(type))
+            {
+                query=query.Where(m=>m.IDThuongHieu.Contains(type));
+            }
+            if(!price)
+            {
+                query=query.OrderByDescending(s=>s.Gia);
+            }
+            else
+            {
+                query=query.OrderBy(s=>s.Gia);
             }
             count = query.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
 

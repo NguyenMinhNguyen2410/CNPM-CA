@@ -33,7 +33,10 @@ namespace Infrastructure.Persistence
             count=query.Count();//Hàm Count dùng để dếm số lượng phần tử thuongHieu có trong context
             return query.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();//Skip là bỏ qua n phần tử đầu , take là chỉ lấy m phần tử 
         }
-        
+        public IEnumerable<ThuongHieu> getAll()
+        {
+            return _conText.thuongHieu.ToList();
+        }
         public ThuongHieu GetThuongHieu(string maThuongHieu)
         {
 

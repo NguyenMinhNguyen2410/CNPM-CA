@@ -24,7 +24,10 @@ namespace Application.Services
         {
            return _thuongHieuRepository.getAll(pageIndex,pageSize,search,Type,out count).MappingThuongHieuList();
         }
-        
+        public IEnumerable<ThuongHieuDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+           return _thuongHieuRepository.getAll().MappingThuongHieuList();
+        }
         public ThuongHieuDTO GetThuongHieu(string maThuongHieu)
         {
            return  _thuongHieuRepository.GetThuongHieu(maThuongHieu).MappingThuongHieuDTO();

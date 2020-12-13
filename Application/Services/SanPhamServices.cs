@@ -31,9 +31,9 @@ namespace Application.Services
         {
             _sanPhamRepository.xoaSanPham(sanPhamDTO.MappingSanPham());
         }
-        public IEnumerable<SanPhamDTO> getAll(int pageIndex, int pageSize,string textSearch, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        public IEnumerable<SanPhamDTO> getAll(int pageIndex, int pageSize,string textSearch,string type,bool price, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
-            return _sanPhamRepository.getAll(pageIndex, pageSize,textSearch, out count).MappingSanPhamDTO1();
+            return _sanPhamRepository.getAll(pageIndex, pageSize,textSearch,type,price, out count).MappingSanPhamDTO1();
         }
         public IEnumerable<SanPhamDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {

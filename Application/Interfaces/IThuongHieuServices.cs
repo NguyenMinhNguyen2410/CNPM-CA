@@ -20,5 +20,6 @@ namespace Application.Interfaces
         
         IEnumerable<ThuongHieuDTO> getAll(int pageIndex, int pageSize,string search,string Type,out int count);
 
+        IEnumerable<ThuongHieuDTO> getAll();
     }
 }

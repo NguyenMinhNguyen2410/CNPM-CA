@@ -9,7 +9,7 @@ namespace Domain.Interfaces
 {
     public interface ISanPhamRepository
     {
-        IEnumerable<SanPham> getAll(int pageIndex, int pageSize,string textSearch, out int count);
+        IEnumerable<SanPham> getAll(int pageIndex, int pageSize,string textSearch,string type,bool price, out int count);
         IEnumerable<SanPham> getAll();
         public IEnumerable<SanPham> get4sp(int boqua);
         void themSanPham(SanPham sanPham);

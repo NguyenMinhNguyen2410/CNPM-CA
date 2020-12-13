@@ -62,12 +62,10 @@
                             @{ @* setup nút quay về , trỏ vào hàm HasPreviousPage ở PaginatedList để kiểm tra *@ var prevDisabled = !Model.SanPham.HasPreviousPage ? "disabled" : ""; @* setup nút tiến tới , trỏ vào hàm HasNextPage ở PaginatedList để kiểm tra *@ var nextDisabled = !Model.SanPham.HasNextPage ? "disabled" : ""; }
                             @* Tạo nút quay về, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
                             <a style="position:absolute" class="btn btn-dark @prevDisabled"
-                               asp-route-pageIndex="@(Model.SanPham.PageIndex -1)" asp-route-textSearch="@Model.textSearch">Previous</a>
+                               asp-route-pageIndex="@(Model.SanPham.PageIndex -1)" asp-route-textSearch="@Model.textSearch" asp-route-type="@Model.type" asp-route-price="@Model.price">Previous</a>
                             @* Tạo nút tiến lên, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
                             <a style="position:absolute; right:0px" class="btn btn-dark @nextDisabled"
-                               asp-route-pageIndex="@(Model.SanPham.PageIndex +1)" asp-route-textSearch="@Model.textSearch">Next</a>
-
-                          
+                               asp-route-pageIndex="@(Model.SanPham.PageIndex +1)" asp-route-textSearch="@Model.textSearch" asp-route-type="@Model.type" asp-route-price="@Model.price">Next</a>
                         </div>
                     </div>
                 </div>
@@ -90,34 +88,20 @@
                                     </a>
                                     <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
                                         <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action active">ADRIATICA</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">CANDINO</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">CASIO</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">CITIZEN</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">DANIEL WELLINGTON</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">FOSSIL</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">FOUETTÉ</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">G-SHOCK & BABY-G</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">MICHAEL KORS</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">OP</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">ORIENT</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">SAGA</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">SEIKO</a>
-                                            <a href="#" class="list-group-item list-group-item-action active">SKAGEN</a>
-
+                                            @if(Model.ThuongHieu != null)
+                                            {
+                                                foreach (var item in Model.ThuongHieu)
+                                                {
+                                                    <a class="list-group-item list-group-item-action active" asp-route-type="@item.IDThuongHieu">@item.TenThuongHieu</a>
+                                                }
+                                            }
 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="list-group-collapse sub-men">
-                                    <a class="list-group-item list-group-item-action" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">
-                                        Từ giá cao đến thấp
-
-                                    </a>
-                                    <a class="list-group-item list-group-item-action" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">
-                                        Từ giá thấp đến cao
-                                    </a>
-
+                                    <a class="list-group-item list-group-item-action" aria-expanded="false" aria-controls="sub-men2" asp-route-price="false">Từ giá cao đến thấp</a>
+                                    <a class="list-group-item list-group-item-action" aria-expanded="false" aria-controls="sub-men2" asp-route-price="true">Từ giá thấp đến cao</a>
                                 </div>
                                 
                             </div>
