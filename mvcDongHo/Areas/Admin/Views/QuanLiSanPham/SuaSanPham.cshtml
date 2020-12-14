@@ -18,38 +18,54 @@
             @*đường dẫn đến admin/ chạy quanlíanphamcontroler/ chạy hàm them sản phẩm*@
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Mã sản phẩm</label>
-                <input asp-for="sanPhamDTO.IDSanPham" class="form-control" id="exampleInputEmail1" placeholder="Nhập mã sản phẩm">
-                <span class="focus-input100 text-danger" asp-validation-for="sanPhamDTO.IDSanPham"></span>
+                <label for="exampleInputEmail1">Mã sản phẩm </label>
+                <input asp-for="sanPhamDTO.IDSanPham" value="@ViewBag.SuaSanPham.IDSanPham" readonly="readonly" class="form-control" id="exampleInputEmail1" placeholder="Nhập mã sản phẩm">
+
+                <span class="focus-input100 text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Tên sản phẩm</label>
-                <input asp-for="sanPhamDTO.TenSanPham" class="form-control" id="exampleInputPassword1" placeholder="Nhập tên sản phẩm">@*asp-for định danh cho cái input*@
-                <span class="focus-input100 text-danger" asp-validation-for="sanPhamDTO.TenSanPham"></span>
+                <label for="exampleInputPassword1">Tên sản phẩm</label>
+                <input asp-for="sanPhamDTO.TenSanPham" value="@ViewBag.SuaSanPham.TenSanPham" class="form-control" id="exampleInputPassword1" placeholder="Nhập tên sản phẩm">@*asp-for định danh cho cái input, value là lấy dữ liệu để bên sửa có dữ liệu*@
+                <span class="focus-input100 text-danger"></span>
             </div>
             <!--Combobox-->
             <div class="form-group">
                 <label>Loại dây</label>
                 <select asp-for="sanPhamDTO.IDDay" class="form-control" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
+                    <option selected="selected">1.Dây da</option>
+                    <option>2.Dây vải</option>
+                    <option>3.Dây cao su</option>
+                    <option>4.Thép không gỉ</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Thương hiệu</label>
                 <select asp-for="sanPhamDTO.IDThuongHieu" class="form-control" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
+                    <option selected="selected">1.ADRIATICA</option>
+                    <option>2.CANDINO</option>
+                    <option>3.CASIO</option>
+                    <option>4.CITIZEN</option>
+                    <option>5.DANIEL WELLINGTON</option>
+                    <option>6.FOSSIL</option>
+                    <option>7.FOUETTÉ</option>
+                    <option>8.G-SHOCK &Aacute; BABY-G</option>
+                    <option>9.MICHAEL KORS</option>
+                    <option>10.OP</option>
+                    <option>11.ORIENT</option>
+                    <option>12.SAGA</option>
+                    <option>13.SEIKO</option>
+                    <option>14.SKAGEN</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Nhà cung cấp</label>
                 <select asp-for="sanPhamDTO.IDNhaCungCap" class="form-control" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
+                    <option selected="selected">Nhật Bản</option>
+                    <option>Mỹ</option>
+                    <option>Đan Mạch</option>
+                    <option>Thụy Sĩ</option>
+                    <option>Thụy Điển</option>
+                    <option>Hồng Kông</option>
                 </select>
             </div>
             <div class="form-group">

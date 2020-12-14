@@ -15,7 +15,6 @@ namespace Domain.Interfaces
         public void ThemThuongHieu(ThuongHieu thuongHieu);
         public void SuaThuongHieu(ThuongHieu thuongHieu);
         public void XoaThuongHieu(string maThuongHieu);
-
         public ThuongHieu GetThuongHieu(string maThuongHieu);
 
     }

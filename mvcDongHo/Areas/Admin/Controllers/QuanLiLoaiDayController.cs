@@ -29,6 +29,7 @@ namespace mvcDongHo.Areas.Admin.Controllers
             var indexVM = new LoaiDayView()
             {
                 LoaiDay = new PaginatedList<LoaiDayDTO>(list, count, pageIndex, pageSize, searchString),
+                Type = Type
             };
 
             //Trả về view + biến indexVM đang giữ list loại dây

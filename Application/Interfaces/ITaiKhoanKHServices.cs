@@ -9,9 +9,17 @@ namespace Application.Interfaces
 {
     public interface ITaiKhoanKHServices
     {
-       bool login(string taiKhoan, string matKhau);
-        public IEnumerable<TaiKhoanKHDTO> getAll();
-        public TaiKhoanKHDTO TimTK(string TaiKhoan, string MatKhau, string IDKhachHang);
+        bool login(string taiKhoan, string matKhau);
         public void ThemTK(TaiKhoanKHDTO taiKhoanKHDTO);
+        public TaiKhoanKHDTO TimTK(string TaiKhoan, string MatKhau, string IDKhachHang);
+        public void themTaiKhoanKH(TaiKhoanKHDTO taiKhoanKH);
+
+        public void xoaTaiKhoanKH(string maTaiKhoanKH);
+
+        public TaiKhoanKHDTO GetTaiKhoanKH(string maTaiKhoanKH);
+
+        IEnumerable<TaiKhoanKHDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count);
+
+        IEnumerable<TaiKhoanKHDTO> getAll();
     }
 }
