@@ -19,11 +19,14 @@ namespace Application.Services
             _nhaCungCapRepository = nhaCungCapRepository;
         }
 
-        public IEnumerable<NhaCungCapDTO> getAll(int pageIndex, int pageSize, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        public IEnumerable<NhaCungCapDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
-            return _nhaCungCapRepository.getAll(pageIndex, pageSize, out count).MappingNhaCungCapDTO1();
+            return _nhaCungCapRepository.getAll(pageIndex, pageSize, search, Type, out count).MappingNhaCungCapList();
         }
-
+        public IEnumerable<NhaCungCapDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+            return _nhaCungCapRepository.getAll().MappingNhaCungCapList();
+        }
         public NhaCungCapDTO GetNhaCungCap(string maNhaCungCap)
         {
             return _nhaCungCapRepository.GetNhaCungCap(maNhaCungCap).MappingNhaCungCapDTO();

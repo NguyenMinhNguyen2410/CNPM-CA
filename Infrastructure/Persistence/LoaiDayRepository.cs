@@ -16,18 +16,28 @@ namespace Infrastructure.Persistence
             this._conText = conText;
         }
 
-
-        //Viết chức năng ở đây, xem mẫu ở SanPhamRepository.cs
-        public IEnumerable<LoaiDay> getAll(int pageIndex, int pageSize, out int count)
+        public IEnumerable<LoaiDay> getAll(int pageIndex, int pageSize, string search, string Type, out int count)
         {
-            //Gán giá trị cho biến count để truyền giá trị về
-            count = _conText.loaiDay.Count();//Hàm Count dùng để dếm số lượng phần tử loaiDay có trong context
-
             var query = _conText.loaiDay.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
-            return query.Skip((pageIndex - 1) * pageSize)
-                        .Take(pageSize).ToList();//Skip là bỏ qua n phần tử đầu , take là chỉ lấy m phần tử 
+            if (!string.IsNullOrEmpty(search))
+            {
+                if (Type == "TenLoaiDay")
+                {
+                    query = query.Where(m => m.TenLoaiDay.Contains(search));
+                }
+                else
+                {
+                    query = query.Where(m => m.IDDay.Contains(search));
+                }
+            }
+            //Gán giá trị cho biến count để truyền giá trị về
+            count = query.Count();//Hàm Count dùng để dếm số lượng phần tử loaiDay có trong context
+            return query.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();//Skip là bỏ qua n phần tử đầu , take là chỉ lấy m phần tử 
         }
-
+        public IEnumerable<LoaiDay> getAll()
+        {
+            return _conText.loaiDay.ToList();
+        }
         public LoaiDay GetLoaiDay(string maLoaiDay)
         {
 

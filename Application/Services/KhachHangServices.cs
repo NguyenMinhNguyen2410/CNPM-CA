@@ -18,5 +18,35 @@ namespace Application.Services
         {
             _khachHangRepository = khachHangRepository;
         }
+
+        public IEnumerable<KhachHangDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+            return _khachHangRepository.getAll(pageIndex, pageSize, search, Type, out count).MappingKhachHangList();
+        }
+        public IEnumerable<KhachHangDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
+        {
+            return _khachHangRepository.getAll().MappingKhachHangList();
+        }
+        public KhachHangDTO GetKhachHang(string maKhachHang)
+        {
+            return _khachHangRepository.GetKhachHang(maKhachHang).MappingKhachHangDTO();
+
+        }
+
+        public void suaKhachHang(KhachHangDTO khachHangDTO)
+        {
+            _khachHangRepository.SuaKhachHang(khachHangDTO.MappingKhachHang());
+        }
+
+        public void themKhachHang(KhachHangDTO khachHangDTO)
+        {
+            _khachHangRepository.ThemKhachHang(khachHangDTO.MappingKhachHang());
+        }
+
+
+        public void xoaKhachHang(string maKhachHang)
+        {
+            _khachHangRepository.XoaKhachHang(maKhachHang);
+        }
     }
 }

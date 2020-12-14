@@ -33,5 +33,13 @@ namespace mvcDongHo.Controllers
             ViewBag.Error = "0";
             return View(nameof(Checkout));
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Register()
+        {
+            return View();
+        }
     }
 }

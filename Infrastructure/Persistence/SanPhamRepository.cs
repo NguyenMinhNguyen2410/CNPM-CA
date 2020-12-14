@@ -53,8 +53,7 @@ namespace Infrastructure.Persistence
         public IEnumerable<SanPham> get4sp(int boqua)
         {
             var query = _conText.sanPham.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
-            return query.Skip(boqua)
-                        .Take(8).ToList();
+            return query.Skip(boqua).Take(8).ToList();
         }
         public void suaSanPham(SanPham sanPham)
         {

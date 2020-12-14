@@ -21,10 +21,11 @@ namespace Infrastructure.Persistence
             var query = _conText.thuongHieu.AsQueryable();//Trả về kiểu tương tự như list nhưng sẽ dùng các phương thức lọc nhanh hơn ( cái này t không rõ lắm - Nguyên)
             if(!string.IsNullOrEmpty(search))
             { 
-                if(Type=="TenThuongHieu"){          
+                if(Type=="TenThuongHieu")
+                {          
                     query=query.Where(m => m.TenThuongHieu.Contains(search));
                 }
-                else
+                else 
                 {
                     query=query.Where(m => m.IDThuongHieu.Contains(search));
                 }

@@ -33,5 +33,15 @@ namespace Application.Mappings
                 SoDienThoai=khachHangDTO.SoDienThoai
             };
         }
+        public static IEnumerable<KhachHangDTO> MappingKhachHangList(this IEnumerable<KhachHang> khachHangS)
+        {
+            List<KhachHangDTO> listreturn = new List<KhachHangDTO>();
+            foreach (var khachHang in khachHangS)
+            {
+                var obnow = khachHang.MappingKhachHangDTO();
+                listreturn.Add(obnow);
+            }
+            return listreturn;
+        }
     }
 }

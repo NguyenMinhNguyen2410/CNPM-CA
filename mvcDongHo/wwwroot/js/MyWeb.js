@@ -52,37 +52,5 @@ $('button#xemchitietnhap').click(function ()
         }
     });   
 });
-// $('input#search').keyup(function(){
-//     var text = $(this).val();
-//     console.log(text);
-//     $.ajax({
-//         type:"GET",
-//         url:"/Home/Search",
-//         data:{textSearch:text},
-//         success:function(response){
-//             $('div#content').empty();
-//             console.log(response);
-//             response.forEach(function(item){
-//                 var obj='<div class="box-img-hover">'
-//                             +'<div class="type-lb">'
-//                                 +'<p class="sale">Mới</p>'
-//                             +'</div>'
-//                             +'<img src="'+item.hinhAnh+'" class="img-fluid" alt="Image">'
-//                             +'<div class="mask-icon">'
-//                                 +'<ul>'
-//                                     +'<li><a data-toggle="tooltip" data-placement="right" title="View" asp-controller="Home" asp-action="Shopdetail" '+'asp-route-id="'+item.idSanPham+'"><i class="fas fa-eye"></i></a></li>'
-//                                 +'</ul>'
-//                                 +'<a class="cart" href="#">Thêm vào giỏ hàng</a>'
-//                             +'</div>'
-//                         +'</div>'
-//                         +'<div class="why-text">'
-//                             +'<h4>'+item.tenSanPham+'</h4>'
-//                             +'<h5>'+item.gia+'</h5>'
-//                         +'</div>';
-                        
-//                 $('div#content').append(obj);
-//             });
-//         }
-//     });
-// });
+
     
