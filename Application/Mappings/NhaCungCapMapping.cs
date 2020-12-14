@@ -31,14 +31,7 @@ namespace Application.Mappings
                 SoDienThoai=nhaCungCapDTO.SoDienThoai
             };
         }
-        public static IEnumerable<NhaCungCapDTO> MappingNhaCungCapDTOList(this IEnumerable<NhaCungCap> nhaCungCapS)
-        {
-            foreach (var nhaCungCap in nhaCungCapS)
-            {
-                yield return nhaCungCap.MappingNhaCungCapDTO();
-            }
-        }// cái hàm này nè là đang lấy dữ liệu từ entity lên r chuyển sang DTO 
-        public static IEnumerable<NhaCungCapDTO> MappingNhaCungCapDTO1(this IEnumerable<NhaCungCap> nhaCungCapS)
+        public static IEnumerable<NhaCungCapDTO> MappingNhaCungCapList(this IEnumerable<NhaCungCap> nhaCungCapS)
         {
             List<NhaCungCapDTO> listreturn = new List<NhaCungCapDTO>();
             foreach (var nhaCungCap in nhaCungCapS)

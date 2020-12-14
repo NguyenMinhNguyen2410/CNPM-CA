@@ -18,16 +18,20 @@ namespace mvcDongHo.Areas.Admin.Controllers
         {
             _loaiDayServices = loaiDayServices;
         }
-        public IActionResult Index(int pageIndex = 1)//pageIndex được mặc định là 1 nếu không có truyền vào
+        public IActionResult Index(int pageIndex = 1, string searchString = "", string Type = "")//pageIndex được mặc định là 1 nếu không có truyền vào
+        //pageIndex là trang hiện hành
+        //searchString là chuỗi tìm kiếm
+        //Type là loại mà chuỗi tìm kiếm muốn nhắm đến , ví dụ ID, Name,...
         {
-            int count;//Tổng số lượng loại dây
-            int pageSize = 3;//Số lượng loại dây trong 1 trang
-            var list = _loaiDayServices.getAll(pageIndex, pageSize, out count);//Hàm này lấy loại dây lên theo số trang , số lượng loại dây 1 trang , gắn lại tổng sản phẩm vào biến count
+            int count;//Tổng số lượng loại dây
+            int pageSize = 3;//Số lượng loại dây trong 1 trang
+            var list = _loaiDayServices.getAll(pageIndex, pageSize, searchString, Type, out count);//Hàm này lấy loại dây lên theo số trang , số lượng loại dây 1 trang , gắn lại tổng sản phẩm vào bién count
             var indexVM = new LoaiDayView()
             {
-                LoaiDay = new PaginatedList<LoaiDayDTO>(list, count, pageIndex, pageSize)
+                LoaiDay = new PaginatedList<LoaiDayDTO>(list, count, pageIndex, pageSize, searchString),
             };
-            //Trả về view + biến indexVM đang giữ list loại dây
+
+            //Trả về view + biến indexVM đang giữ list loại dây
             return View(indexVM);
         }
 
@@ -61,10 +65,10 @@ namespace mvcDongHo.Areas.Admin.Controllers
         }
 
         public IActionResult SuaLoaiDay(string id)//truyền mã vào để sửa, mục đích là để khi bấm nút sửa dựa vào mã ở
-                                                     //giao diện QuanLiLoaiDay/Index truy xuất xuống services/reponsitory để lấy đối tượng loại dây lên và gán dữ liệu cho trang SuaLoaiDay
+                                                     //giao diện QuanLiLoaiDay/Index truy xuất xuống services/reponsitory để lấy đối tượng loại dây lên và gán dữ liệu cho trang SuaLoaiDay
 
         {
-            ViewBag.SuaLoaiDay = _loaiDayServices.GetLoaiDay(id);//gọi hàm lấy một đối tượng loại dây bên services và gán cho viewbag
+            ViewBag.SuaLoaiDay = _loaiDayServices.GetLoaiDay(id);//gọi hàm lấy một đối tượng loại dây bên services và gán cho viewbag
             return View();
         }
 
@@ -72,7 +76,7 @@ namespace mvcDongHo.Areas.Admin.Controllers
         public IActionResult XoaLoaiDayData(string id) //truyền mã vào để xóa một đối tượng
         {
             _loaiDayServices.xoaLoaiDay(id);//gọi hàm xóa bên services
-            return RedirectToAction("Index");//quay về trang index
+            return RedirectToAction("Index"); // trả về view
 
         }
     }

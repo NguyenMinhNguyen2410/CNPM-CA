@@ -17,6 +17,8 @@ namespace Application.Interfaces
 
         public LoaiDayDTO GetLoaiDay(string maLoaiDay);
 
-        IEnumerable<LoaiDayDTO> getAll(int pageIndex, int pageSize, out int count);
+        IEnumerable<LoaiDayDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count);
+
+        IEnumerable<LoaiDayDTO> getAll();
     }
 }
