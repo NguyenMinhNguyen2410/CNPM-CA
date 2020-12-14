@@ -25,7 +25,7 @@ namespace Infrastructure.Persistence
                 {          
                     query=query.Where(m => m.TenThuongHieu.Contains(search));
                 }
-                else
+                else 
                 {
                     query=query.Where(m => m.IDThuongHieu.Contains(search));
                 }
