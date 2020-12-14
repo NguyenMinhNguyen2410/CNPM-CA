@@ -98,13 +98,13 @@ namespace mvcDongHo
                 endpoints.MapControllerRoute(
                     name: default,
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                // endpoints.MapControllerRoute(
+                //     name: "Admin",
+                //     pattern: "Admin",
+                //     defaults: new { area = "Admin", Controller = "Dashboard", Action = "Index" });
                 endpoints.MapControllerRoute(
                     name: "Admin",
                     pattern: "Admin",
-                    defaults: new { area = "Admin", Controller = "Dashboard", Action = "Index" });
-                endpoints.MapControllerRoute(
-                    name: "LoginAdmin",
-                    pattern: "LoginAdmin",
                     defaults: new { area = "Admin", Controller = "Login", Action = "Index" });
             });
         }
