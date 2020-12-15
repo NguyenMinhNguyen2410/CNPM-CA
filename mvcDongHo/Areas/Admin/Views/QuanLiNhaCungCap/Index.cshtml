@@ -15,10 +15,24 @@
             <div class="col-md-8 offset-md-2">
                 <form asp-controller="QuanLiNhaCungCap" asp-action="Index">
                     <div class="input-group">
-                        <select asp-for="Type">
-                            <option value="IDNhaCungCap">Mã nhà cung cấp</option>
-                            <option value="TenNhacungCap">Tên nhà cung cấp</option>
-                            <option value="SoDienThoai">Số điện thoại</option>
+                        <select asp-for="Type" id="Type">
+                            <option value="IDNhaCungCap">Mã nhà cung cấp</option>
+                            @if (@Model.Type == "TenNhacungCap")
+                            {
+                                <option value="TenNhacungCap" selected>Tên nhà cung cấp</option>
+                            }
+                            else
+                            {
+                                <option value="TenNhacungCap">Tên nhà cung cấp</option>
+                            }
+                            @if (@Model.Type == "SoDienThoai")
+                            {
+                                <option value="SoDienThoai" selected>Số điện thoại</option>
+                            }
+                            else
+                            {
+                                <option value="SoDienThoai">Số điện thoại</option>
+                            }
                         </select>
                         <input type="search" class="form-control form-control-lg" placeholder="Tìm kiếm" asp-for="searchString">
                         <div class="input-group-append">
@@ -82,9 +96,9 @@
 }
 
 @* Tạo nút quay về, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
-<a class="btn btn-default @prevDisabled" asp-route-pageIndex="@(Model.NhaCungCap.PageIndex -1)" asp-route-searchString="@Model.NhaCungCap.searchString">Previous</a>
+<a class="btn btn-default @prevDisabled" asp-route-pageIndex="@(Model.NhaCungCap.PageIndex -1)" asp-route-searchString="@Model.NhaCungCap.searchString" asp-route-Type="@Model.Type">Previous</a>
 @* Tạo nút tiến lên, nút này trỏ trực tiếp về Index và truyền parameter pageIndex *@
-<a class="btn btn-default @nextDisabled" asp-route-pageIndex="@(Model.NhaCungCap.PageIndex +1)" asp-route-searchString="@Model.NhaCungCap.searchString">Next</a>
+<a class="btn btn-default @nextDisabled" asp-route-pageIndex="@(Model.NhaCungCap.PageIndex +1)" asp-route-searchString="@Model.NhaCungCap.searchString" asp-route-Type="@Model.Type">Next</a>
 
 <!--Thẻ show lên xác nhận xóa hay không-->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -113,7 +127,7 @@
     $("button#xoanhacungcap").click(function ()//tạo sự kiên click cho cái button ở trên theo cú pháp của jquery: "tenthe#mã thẻ"
     {
         var id = $(this).data("id");//gán IDNhaCungCap đã được lưu vào data-id ở trên để gán vào biến id
-        var obj = '<a class="btn btn-success" href="https://localhost:44365/Admin/QuanLiNhaCungCap/XoaNhaCungCapData/' + id + '">Có</a>'
+        var obj = '<a class="btn btn-success" href="https://localhost:5001/Admin/QuanLiNhaCungCap/XoaNhaCungCapData/' + id + '">Có</a>'
             + '<button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>';//tạo biến obj để lưu lại cái html mình cần xuất ra, cái này tui không quá rõ
         //nhưng mà cứ làm theo thôi, hok khó
         $("div#footer-del").html(obj);//gọi cái thẻ div có mã là footer-del để chèn phần html zo

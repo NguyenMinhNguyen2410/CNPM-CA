@@ -25,17 +25,14 @@ namespace Infrastructure.Persistence
                 {
                     query = query.Where(m => m.TenKhachHang.Contains(search));
                 }
-                else
-                {
-                    if (Type == "SoDienThoai")
+                else if (Type == "SoDienThoai")
                     {
-                        query = query.Where(m => m.SoDienThoai.Contains(search));
+                    query = query.Where(m => m.SoDienThoai.Contains(search));
                     }
-                    else
+                else
                     {
                         query = query.Where(m => m.IDKhachHang.Contains(search));
                     }
-                }
             }
             //Gán giá trị cho biến count để truyền giá trị về
             count = query.Count();//Hàm Count dùng để dếm số lượng phần tử khachHang có trong context

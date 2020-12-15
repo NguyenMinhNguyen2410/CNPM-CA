@@ -29,6 +29,7 @@ namespace mvcDongHo.Areas.Admin.Controllers
             var indexVM = new NhaCungCapView()
             {
                 NhaCungCap = new PaginatedList<NhaCungCapDTO>(list,count, pageIndex, pageSize,searchString),
+                Type=Type
             };
             
             //Trả về view + biến indexVM đang giữ list nhà cung cấp

@@ -66,6 +66,9 @@ namespace mvcDongHo
             //QuanLiNhaCungCap
             services.AddScoped<INhaCungCapRepository, NhaCungCapRepository>();
             services.AddScoped<INhaCungCapServices, NhaCungCapServices>();
+            //QuanLiTaiKhoanKH
+            services.AddScoped<ITaiKhoanKHRepository, TaiKhoanKHRepository>();
+            services.AddScoped<ITaiKhoanKHServices, TaiKhoanKHServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

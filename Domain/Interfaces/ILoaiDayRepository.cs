@@ -15,7 +15,6 @@ namespace Domain.Interfaces
         public void ThemLoaiDay(LoaiDay loaiDay);
         public void SuaLoaiDay(LoaiDay loaiDay);
         public void XoaLoaiDay(string maLoaiDay);
-
         public LoaiDay GetLoaiDay(string maLoaiDay);
     }
 }

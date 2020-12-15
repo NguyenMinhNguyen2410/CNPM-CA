@@ -44,4 +44,3 @@ $('button#xemchitietnhap').click(function ()
         }
     });   
 });
-    

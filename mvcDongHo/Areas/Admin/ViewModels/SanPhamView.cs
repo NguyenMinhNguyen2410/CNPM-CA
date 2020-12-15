@@ -9,20 +9,11 @@ namespace mvcDongHo.Areas.Admin.ViewModels
     public class SanPhamView
     {
         public SanPhamDTO sanPhamDTO { get; set; }
-       // public string IDSanPham { get; set; }
-
-        //public string TenSanPham { get; set; }
-
-        //public string IDDay { get; set; }
-
-       // public string IDThuongHieu { get; set; }
-
-        //public string IDNhaCungCap { get; set; }
-
-        //public string BaoHanh { get; set; }
-
-        //public int SoLuong { get; set; }
-
-        //public float Gia { get; set; }
+        //Hàm để tạo thành list kiểu SanPhamKHDTO
+        public PaginatedList<SanPhamDTO> SanPham{ get; set; }
+        //Biến chứa text search
+        public string searchString { get; set; }
+        //Biến chữa loại search
+        public string Type { get; set; }
     }
 }

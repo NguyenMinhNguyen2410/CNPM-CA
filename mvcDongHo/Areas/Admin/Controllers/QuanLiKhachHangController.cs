@@ -28,6 +28,7 @@ namespace mvcDongHo.Areas.Admin.Controllers
             var indexVM = new KhachHangView()
             {
                 KhachHang = new PaginatedList<KhachHangDTO>(list, count, pageIndex, pageSize, searchString),
+                Type = Type
             };
 
             //Trả về view + biến indexVM đang giữ list thương hiệu

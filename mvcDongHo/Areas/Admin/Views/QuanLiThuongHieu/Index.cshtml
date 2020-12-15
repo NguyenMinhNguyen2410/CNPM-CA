@@ -17,7 +17,7 @@
                     <div class="input-group">
                         <select asp-for="Type" id="Type">
                             <option value="IDThuongHieu">Mã thương hiệu</option>
-                            @if(@Model.Type=="TenThuongHieu")
+                            @if (@Model.Type == "TenThuongHieu")
                             {
                                 <option value="TenThuongHieu" selected>Tên thương hiệu</option>
                             }
@@ -109,7 +109,7 @@
 <!--Kết thúc thẻ xác nhận không có gì đặc biệt-->
 <!--end table-->
 <script type="text/javascript">
-//viết jquery, do xài cái model để xác nhận có muốn xóa hay không thì mình không lấy mã trực tiếp như cái sửa được nên phải viết thêm cái này
+    //viết jquery, do xài cái model để xác nhận có muốn xóa hay không thì mình không lấy mã trực tiếp như cái sửa được nên phải viết thêm cái này
     $("button#xoathuonghieu").click(function ()//tạo sự kiên click cho cái button ở trên theo cú pháp của jquery: "tenthe#mã thẻ"
     {
         var id = $(this).data("id");//gán IDThuongHieu đã được lưu vào data-id ở trên để gán vào biến id
@@ -118,5 +118,4 @@
         //nhưng mà cứ làm theo thôi, hok khó
         $("div#footer-del").html(obj);//gọi cái thẻ div có mã là footer-del để chèn phần html zo
     });
-
 </script>

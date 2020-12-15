@@ -25,16 +25,13 @@ namespace Infrastructure.Persistence
                 {
                     query = query.Where(m => m.TenNhacungCap.Contains(search));
                 }
+                else if (Type == "SoDienThoai")
+                {
+                    query = query.Where(m => m.SoDienThoai.Contains(search));
+                }
                 else
                 {
-                    if (Type == "SoDienThoai")
-                    {
-                        query = query.Where(m => m.SoDienThoai.Contains(search));
-                    }
-                    else
-                    {
-                        query = query.Where(m => m.IDNhaCungCap.Contains(search));
-                    }
+                    query = query.Where(m => m.IDNhaCungCap.Contains(search));
                 }
             }
             //Gán giá trị cho biến count để truyền giá trị về
