@@ -70,7 +70,7 @@
                                                                 </a>
                                                             </td>
                                                             <td class="name-pr">
-                                                                <a href="#">
+                                                                <a asp-controller="Home" asp-action="Shopdetail" asp-route-id="@item.sanPhamDTO.IDSanPham">
                                                                     @item.sanPhamDTO.TenSanPham
                                                                 </a>
                                                             </td>
@@ -83,7 +83,7 @@
                                                             <td class="total-pr">
                                                                 <p>@total Đ</p>
                                                             </td>
-                                                            
+                                                           
                                                             @*<td><a href="" data-id="@item.sanPhamDTO.IDSanPham" class="updateCart">Update</a></td>*@
                                                             <td class="remove-pr">
                                                             <a asp-controller="Home" asp-action="deleteCart" asp-route-id="@item.sanPhamDTO.IDSanPham">
@@ -112,7 +112,7 @@
             </div>
             <div class="col-lg-6 col-sm-6">
                 <div class="update-box">
-                    <input value="Cập nhật giỏ hàng" type="submit">
+                    <input class="updateCart" value="Cập nhật giỏ hàng" type="submit">
                 </div>
             </div>
         </div>
@@ -122,26 +122,36 @@
             <div class="col-lg-4 col-sm-12">
                 <div class="order-box">
                     <h3>Chi tiết thanh toán</h3>
-                    <div class="d-flex">
-                        <h4>Giá sản phẩm</h4>
-                        <div class="ml-auto font-weight-bold"> $ 130 </div>
-                    </div>
+                    @{
+                        float tongThanhToan = 0f;
+                        foreach (var item in ViewBag.carts)
+                        {
+                            float total = item.sanPhamDTO.Gia * item.quantityItem;
+                            tongThanhToan = tongThanhToan + total;
+                        }
 
-                    <hr class="my-1">
-                    <div class="d-flex">
-                        <h4>Mã giảm giá</h4>
-                        <div class="ml-auto font-weight-bold"> $ 10 </div>
-                    </div>
+                        <div class="d-flex">
+                            <h4>Giá tổng các sản phẩm</h4>
+                            <div class="ml-auto font-weight-bold">@tongThanhToan Đ </div>
+                        </div>
 
-                    <div class="d-flex">
-                        <h4>Phí giao hàng</h4>
-                        <div class="ml-auto font-weight-bold"> Free </div>
-                    </div>
-                    <hr>
-                    <div class="d-flex gr-total">
-                        <h5>Tổng cộng</h5>
-                        <div class="ml-auto h5"> $ 388 </div>
-                    </div>
+                        <hr class="my-1">
+                        <div class="d-flex">
+                            <h4>Mã giảm giá</h4>
+                            <div class="ml-auto font-weight-bold"> 0 Đ </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <h4>Phí giao hàng</h4>
+                            <div class="ml-auto font-weight-bold"> 0 Đ </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex gr-total">
+                            <h5>Tổng cộng</h5>
+                            <div class="ml-auto h5"> @tongThanhToan Đ </div>
+                        </div>
+                    }
+
                     <hr>
                 </div>
             </div>

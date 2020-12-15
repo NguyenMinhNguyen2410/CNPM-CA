@@ -83,12 +83,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="login-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                            <option>ĐĂNG KÍ</option>
-                            <option>ĐĂNG NHẬP</option>
-                        </select>
-                    </div>
+                    
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
@@ -127,69 +122,32 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item">@Html.ActionLink("Trang Chủ", "Index", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("Chúng tôi", "About", "Home")</li>
-                        <li class="dropdown active" style="text-align:center">
-                            <a href="@Url.Action("Shop","Home")" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">CỬA HÀNG</a>
+                        <li class="dropdown">
+                            <a href="@Url.Action("Shop","Home")" class="nav-link dropdown-toggle" data-toggle="dropdown" style="padding-top: 0px">CỬA HÀNG</a>
                             <ul class="dropdown-menu">
                                 <li><a href="@Url.Action("Shop","Home")">Sản Phẩm</a></li>
 
                                 <li><a href="@Url.Action("Checkout","TaiKhoan")">Thanh toán</a></li>
                                 <li><a href="@Url.Action("MyAccout","Home")">Tài Khoản</a></li>
 
-
-
                             </ul>
                         </li>
-
-                        <li><a class="nav-item">@Html.ActionLink("Liên Hệ", "Contactus", "Home")</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-                <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
-                    <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu">
-                            <a asp-area=""
-                               asp-controller="Cart"
-                               asp-action="ListCart">
+                        <li class="nav-item">@Html.ActionLink("Liên Hệ", "Contactus", "Home")</li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Cart","Home")">
                                 <i class="fa fa-shopping-bag"></i>
                                 <span class="badge">@coutCart</span>
-                                <p>GIỎ HÀNG</p>
+                                
                             </a>
                         </li>
                     </ul>
                 </div>
+                <!-- /.navbar-collapse -->
+                <!-- Start Atribute Navigation -->
+                
                 <!-- End Atribute Navigation -->
             </div>
-            <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <div class="cart-box">
-                    
-                    <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="/images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="@Url.Action("Cart","Home")" class="btn btn-default hvr-hover btn-cart">Xem giỏ hàng</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End Side Menu -->
+            
         </nav>
         <!-- End Navigation -->
     </header>
