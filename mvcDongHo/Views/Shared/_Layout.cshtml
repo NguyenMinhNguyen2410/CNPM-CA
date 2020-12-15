@@ -2,6 +2,27 @@
 @{
     Layout = null;
 }
+
+<!-- Đoạn code dưới lấy danh sách giỏ hàng qua session key "cart",
+    sau đó đếm nó, có bao nhiêu product trong giỏ hàng, mặc định  = 0 -->
+@{
+    var data = Context.Session.GetString("cart");
+    int coutCart = 0;
+    if (data == null)
+    {
+        coutCart = 0;
+    }
+    else
+    {
+        var data2 = Context.Session.GetString("cart");
+        List<mvcDongHo.ViewModels.CartItem> dataCart = JsonConvert.DeserializeObject<List<mvcDongHo.ViewModels.CartItem>>(data2);
+        foreach (var item in dataCart)
+        {
+            coutCart += item.quantityItem;
+        }
+    }
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -110,7 +131,7 @@
                             <a href="@Url.Action("Shop","Home")" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">CỬA HÀNG</a>
                             <ul class="dropdown-menu">
                                 <li><a href="@Url.Action("Shop","Home")">Sản Phẩm</a></li>
-                        
+
                                 <li><a href="@Url.Action("Checkout","TaiKhoan")">Thanh toán</a></li>
                                 <li><a href="@Url.Action("MyAccout","Home")">Tài Khoản</a></li>
 
@@ -119,7 +140,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">@Html.ActionLink("Liên Hệ", "Contactus", "Home")</a></li>
+                        <li><a class="nav-item">@Html.ActionLink("Liên Hệ", "Contactus", "Home")</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -128,9 +149,11 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
-                            <a href="@Url.Action("Cart","Home")">
+                            <a asp-area=""
+                               asp-controller="Cart"
+                               asp-action="ListCart">
                                 <i class="fa fa-shopping-bag"></i>
-                                <span class="badge">0</span>
+                                <span class="badge">@coutCart</span>
                                 <p>GIỎ HÀNG</p>
                             </a>
                         </li>
@@ -141,7 +164,8 @@
             <!-- Start Side Menu -->
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
+                <div class="cart-box">
+                    
                     <ul class="cart-list">
                         <li>
                             <a href="#" class="photo"><img src="/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
@@ -163,7 +187,7 @@
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
                         </li>
                     </ul>
-                </li>
+                </div>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -185,14 +209,6 @@
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme owl-loaded owl-drag">
-
-
-
-
-
-
-
-
 
 
             <div class="owl-stage-outer">
@@ -300,10 +316,10 @@
                         </div>
                     </div>
                 </div>
-                </div>
-            </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fas fa-arrow-right"></i></button></div><div class="owl-dots disabled"></div>
-        </div>
+            </div>
+        </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fas fa-arrow-right"></i></button></div><div class="owl-dots disabled"></div>
     </div>
+   
     <!-- End Instagram Feed  -->
     <!-- Start Footer  -->
     <footer>
@@ -422,6 +438,5 @@
     <div role="dialog" id="baguetteBox-overlay"><div id="baguetteBox-slider"></div><button type="button" id="previous-button" aria-label="Previous" class="baguetteBox-button"><svg width="44" height="60"><polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button><button type="button" id="next-button" aria-label="Next" class="baguetteBox-button"><svg width="44" height="60"><polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button><button type="button" id="close-button" aria-label="Close" class="baguetteBox-button"><svg width="30" height="30"><g stroke="rgb(160,160,160)" stroke-width="4"><line x1="5" y1="5" x2="25" y2="25"></line><line x1="5" y1="25" x2="25" y2="5"></line></g></svg></button></div>
 
 
-    </div>
 </body>
 </html>
