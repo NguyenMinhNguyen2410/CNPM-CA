@@ -10,37 +10,30 @@ namespace Application.Mappings
 {
     public static class TaiKhoanKHMapping
     {
-        public static TaiKhoanKHDTO MappingTaiKhoanDTO(this TaiKhoanKH taiKhoan)
+        public static TaiKhoanKHDTO MappingTaiKhoanKHDTO(this TaiKhoanKH taiKhoanKH)
         {
             return new TaiKhoanKHDTO
             {
-                TaiKhoan = taiKhoan.TaiKhoan,
-                MatKhau = taiKhoan.MatKhau,
-                IDKhachHang = taiKhoan.IDKhachHang
+                TaiKhoan = taiKhoanKH.TaiKhoan,
+                MatKhau = taiKhoanKH.MatKhau,
+                IDKhachHang = taiKhoanKH.IDKhachHang
             };
         }
-        public static TaiKhoanKH MappingTaiKhoan(this TaiKhoanKHDTO taiKhoanDTO)
+        public static TaiKhoanKH MappingTaiKhoanKH(this TaiKhoanKHDTO taiKhoanKHDTO)
         {
             return new TaiKhoanKH
             {
-                TaiKhoan = taiKhoanDTO.TaiKhoan,
-                MatKhau = taiKhoanDTO.MatKhau,
-                IDKhachHang = taiKhoanDTO.IDKhachHang
+                TaiKhoan = taiKhoanKHDTO.TaiKhoan,
+                MatKhau = taiKhoanKHDTO.MatKhau,
+                IDKhachHang = taiKhoanKHDTO.IDKhachHang
             };
         }
-        public static IEnumerable<TaiKhoanKHDTO> MappingTaiKhoanDTOList(this IEnumerable<TaiKhoanKH> taiKhoanKHs)
-        {
-            foreach (var sp in taiKhoanKHs)
-            {
-                yield return sp.MappingTaiKhoanDTO();
-            }
-        }// cái hàm này nè là đang lấy dữ liệu từ entity lên r chuyển sang DTO 
-        public static IEnumerable<TaiKhoanKHDTO> MappingTaiKhoanDTO1(this IEnumerable<TaiKhoanKH> taiKhoanKHs)
+        public static IEnumerable<TaiKhoanKHDTO> MappingTaiKhoanKHList(this IEnumerable<TaiKhoanKH> taiKhoanKHS)
         {
             List<TaiKhoanKHDTO> listreturn = new List<TaiKhoanKHDTO>();
-            foreach (var sp in taiKhoanKHs)
+            foreach (var taiKhoanKH in taiKhoanKHS)
             {
-                var obnow = sp.MappingTaiKhoanDTO();
+                var obnow = taiKhoanKH.MappingTaiKhoanKHDTO();
                 listreturn.Add(obnow);
             }
             return listreturn;
