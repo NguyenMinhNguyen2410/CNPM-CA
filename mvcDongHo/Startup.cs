@@ -30,6 +30,7 @@ namespace mvcDongHo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllersWithViews();
             services.AddDbContext<DongHoContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataConnection")));
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
@@ -66,18 +67,15 @@ namespace mvcDongHo
             //QuanLiNhaCungCap
             services.AddScoped<INhaCungCapRepository, NhaCungCapRepository>();
             services.AddScoped<INhaCungCapServices, NhaCungCapServices>();
-<<<<<<< HEAD
 
             services.AddDistributedMemoryCache();           // Đăng ký dịch vụ lưu cache trong bộ nhớ (Session sẽ sử dụng nó)
             services.AddSession(cfg => {                    // Đăng ký dịch vụ Session
                 cfg.Cookie.Name = "user";             // Đặt tên Session - tên này sử dụng ở Browser (Cookie)
                 cfg.IdleTimeout = new TimeSpan(0, 30, 0);    // Thời gian tồn tại của Session
             });
-=======
             //QuanLiTaiKhoanKH
             services.AddScoped<ITaiKhoanKHRepository, TaiKhoanKHRepository>();
             services.AddScoped<ITaiKhoanKHServices, TaiKhoanKHServices>();
->>>>>>> master
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -115,10 +113,6 @@ namespace mvcDongHo
                 endpoints.MapControllerRoute(
                     name: "Admin",
                     pattern: "Admin",
-                    defaults: new { area = "Admin", Controller = "Dashboard", Action = "Index" });
-                endpoints.MapControllerRoute(
-                    name: "LoginAdmin",
-                    pattern: "LoginAdmin",
                     defaults: new { area = "Admin", Controller = "Login", Action = "Index" });
             });
         }

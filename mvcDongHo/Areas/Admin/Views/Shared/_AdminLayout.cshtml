@@ -19,7 +19,7 @@ The above copyright notice and this permission notice shall be included in all c
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Admin</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -55,23 +55,14 @@ The above copyright notice and this permission notice shall be included in all c
             </ul>
 
             <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Messages Dropdown Menu -->
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <!-- <i class="fas fa-th-large"></i> -->
-                        <i class="fas fa-user"></i>
-                    </a>
-                </li>
-            </ul>
         </nav>
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="~/Admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="brand-link">
+             
+                <span class="brand-text font-weight-light">Admin</span>
             </a>
 
             <!-- Sidebar -->
@@ -227,32 +218,7 @@ The above copyright notice and this permission notice shall be included in all c
                             </ul>
                         </li>
                         <!-- end quản lí nhà cung cấp -->
-                        <!-- kho -->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <!-- <i class="nav-icon fas fa-edit"></i> -->
-                                <i class="fas fa-warehouse"></i>
-                                <p>
-                                    Quản lí kho
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="QuanLiKho" asp-action="Index" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Kho</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="QuanLiKho" asp-action="NhapHang" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Nhập hàng</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- end Kho -->
+                        
                         <!-- khach hàng -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -295,32 +261,6 @@ The above copyright notice and this permission notice shall be included in all c
                             </ul>
                         </li>
                         <!--End Quản lí loại dây-->
-                        <!-- Thống kê -->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <!-- <i class="nav-icon fas fa-chart-pie"></i> -->
-                                <i class="fas fa-chart-bar"></i>
-                                <p>
-                                    Thống kê
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Thống kê sản phẩm</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Thống kê hóa đơn bán</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- end thống kê -->
                         <!-- <li class="nav-header">EXAMPLES</li> -->
                         <!-- bỏ -->
                     </ul>
