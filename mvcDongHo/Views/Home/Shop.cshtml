@@ -44,7 +44,7 @@
                                                         <ul>
                                                             <li><a data-toggle="tooltip" data-placement="right" title="View" asp-controller="Home" asp-action="Shopdetail" asp-route-id="@p.IDSanPham"><i class="fas fa-eye"></i></a></li>
                                                         </ul>
-                                                        <a class="cart" href="#">Thêm vào giỏ hàng</a>
+                                                        <a asp-controller="Home" asp-action="addCart" asp-route-id="@p.IDSanPham" class="cart">Thêm vào giỏ hàng</a>
                                                     </div>
                                                 </div>
                                                 <div class="why-text">

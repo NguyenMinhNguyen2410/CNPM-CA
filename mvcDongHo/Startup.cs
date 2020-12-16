@@ -1,4 +1,4 @@
-using Infrastructure.Persistence;
+﻿using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -66,6 +66,18 @@ namespace mvcDongHo
             //QuanLiNhaCungCap
             services.AddScoped<INhaCungCapRepository, NhaCungCapRepository>();
             services.AddScoped<INhaCungCapServices, NhaCungCapServices>();
+<<<<<<< HEAD
+
+            services.AddDistributedMemoryCache();           // Đăng ký dịch vụ lưu cache trong bộ nhớ (Session sẽ sử dụng nó)
+            services.AddSession(cfg => {                    // Đăng ký dịch vụ Session
+                cfg.Cookie.Name = "user";             // Đặt tên Session - tên này sử dụng ở Browser (Cookie)
+                cfg.IdleTimeout = new TimeSpan(0, 30, 0);    // Thời gian tồn tại của Session
+            });
+=======
+            //QuanLiTaiKhoanKH
+            services.AddScoped<ITaiKhoanKHRepository, TaiKhoanKHRepository>();
+            services.AddScoped<ITaiKhoanKHServices, TaiKhoanKHServices>();
+>>>>>>> master
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +95,8 @@ namespace mvcDongHo
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

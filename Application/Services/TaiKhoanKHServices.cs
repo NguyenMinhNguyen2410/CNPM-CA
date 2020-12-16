@@ -18,33 +18,48 @@ namespace Application.Services
     
     public class TaiKhoanKHServices : ITaiKhoanKHServices
     {
-        //public readonly HttpContext _httpContext;
-        public readonly ITaiKhoanKHRepository _taiKhoanRepository;
-        /*public TaiKhoanKHServices(IHttpContextAccessor httpContextAccessor,ITaiKhoanKHRepository taiKhoanKHRepository)
+        private readonly ITaiKhoanKHRepository _taiKhoanKHRepository;//Tạo biến chứa dữ liệu 
+        public TaiKhoanKHServices(ITaiKhoanKHRepository taiKhoanKHRepository)//constructor để gán dữ liệu vào biến, chi tiết xem thêm ở SanPhamServices.cs
         {
-            _taiKhoanRepository = taiKhoanKHRepository;
-            //_httpContext = httpContextAccessor.HttpContext;
-        }*/
-        public TaiKhoanKHServices(ITaiKhoanKHRepository taiKhoanKHRepository)
+            _taiKhoanKHRepository = taiKhoanKHRepository;
+        }
+
+        public IEnumerable<TaiKhoanKHDTO> getAll(int pageIndex, int pageSize, string search, string Type, out int count)//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
-            _taiKhoanRepository = taiKhoanKHRepository;
-            //_httpContext = httpContextAccessor.HttpContext;
+            return _taiKhoanKHRepository.getAll(pageIndex, pageSize, search, Type, out count).MappingTaiKhoanKHList();
         }
         public IEnumerable<TaiKhoanKHDTO> getAll()//gọi hàm bên mapping để chuyển dữ liệu mấy hàm kia y chang, khó hiểu nhưng dễ viết
         {
-            return _taiKhoanRepository.getAll().MappingTaiKhoanDTO1();
+            return _taiKhoanKHRepository.getAll().MappingTaiKhoanKHList();
+        }
+        public TaiKhoanKHDTO GetTaiKhoanKH(string maTaiKhoanKH)
+        {
+            return _taiKhoanKHRepository.GetTaiKhoanKH(maTaiKhoanKH).MappingTaiKhoanKHDTO();
+
+        }
+
+        public void themTaiKhoanKH(TaiKhoanKHDTO taiKhoanKHDTO)
+        {
+            _taiKhoanKHRepository.ThemTaiKhoanKH(taiKhoanKHDTO.MappingTaiKhoanKH());
+        }
+
+
+        public void xoaTaiKhoanKH(string maTaiKhoanKH)
+        {
+            _taiKhoanKHRepository.XoaTaiKhoanKH(maTaiKhoanKH);
         }
         public TaiKhoanKHDTO TimTK(string TaiKhoan, string MatKhau, string IDKhachHang)
         {
-            return _taiKhoanRepository.TimTK(TaiKhoan, MatKhau, IDKhachHang).MappingTaiKhoanDTO();
+            return _taiKhoanKHRepository.TimTK(TaiKhoan, MatKhau, IDKhachHang).MappingTaiKhoanKHDTO();
         }
         public void ThemTK(TaiKhoanKHDTO taiKhoanKHDTO)
         {
-            _taiKhoanRepository.ThemTK(taiKhoanKHDTO.MappingTaiKhoan());
+            _taiKhoanKHRepository.ThemTK(taiKhoanKHDTO.MappingTaiKhoanKH());
         }
-        public bool login(string taiKhoan , string matKhau)
+
+        public bool login(string taiKhoan, string matKhau)
         {
-            var list = _taiKhoanRepository.getAll();
+            var list = _taiKhoanKHRepository.getAll();
             //var listdoi = list.MappingDTO();
             var flag = false;
             foreach (var item in list)

@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\mvcDongHo",
-    "\\mvcDongHo\\Areas",
-    "\\mvcDongHo\\Areas\\Admin",
-    "\\mvcDongHo\\Areas\\Admin\\Controllers"
+    ""
   ],
-  "SelectedNode": "\\mvcDongHo\\Areas\\Admin\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -15,7 +15,6 @@ namespace Domain.Interfaces
         public void ThemNhaCungCap(NhaCungCap nhaCungCap);
         public void SuaNhaCungCap(NhaCungCap nhaCungCap);
         public void XoaNhaCungCap(string maNhaCungCap);
-
         public NhaCungCap GetNhaCungCap(string maNhaCungCap);
     }
 }
